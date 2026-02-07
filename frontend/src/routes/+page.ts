@@ -1,14 +1,15 @@
-import type { PageServerLoad } from './$types';
+import type { PageLoad } from './$types';
 import type { HeroData, AboutData, Project, ContactInfo } from '$lib/types';
 
-const API_BASE = process.env.API_URL || 'http://localhost:3000';
+export const prerender = false;
+export const ssr = false;
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export const load: PageLoad = async ({ fetch }) => {
 	const [heroRes, aboutRes, projectsRes, contactRes] = await Promise.all([
-		fetch(`${API_BASE}/api/hero`),
-		fetch(`${API_BASE}/api/about`),
-		fetch(`${API_BASE}/api/projects`),
-		fetch(`${API_BASE}/api/contact`)
+		fetch('/api/hero'),
+		fetch('/api/about'),
+		fetch('/api/projects'),
+		fetch('/api/contact')
 	]);
 
 	const hero: HeroData = await heroRes.json();
