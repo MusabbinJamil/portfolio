@@ -48,22 +48,22 @@
 	}
 	h3 {
 		color: #00ff41;
-		font-size: 1.2rem;
+		font-size: 1.825rem;
 	}
 	.year {
 		color: #00ff41;
-		font-size: 0.9rem;
+		font-size: 1.525rem;
 		font-weight: 500;
 	}
 	.institution {
 		color: #00cc33;
-		font-size: 1.05rem;
+		font-size: 1.675rem;
 		font-weight: 500;
 		margin-bottom: 8px;
 	}
 	.details {
 		color: #008f11;
 		line-height: 1.7;
-		font-size: 0.9rem;
+		font-size: 1.525rem;
 	}
 </style>

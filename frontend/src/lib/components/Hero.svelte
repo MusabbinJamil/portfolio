@@ -5,11 +5,13 @@
 </script>
 
 <section class="hero">
-	<p class="greeting">Hi, my name is</p>
-	<h1 class="name">{hero.name}</h1>
-	<p class="title">{hero.title}</p>
-	<p class="tagline">{hero.tagline}</p>
-	<a href="#projects" class="cta">View My Work</a>
+	<div class="card">
+		<p class="greeting">Hi, my name is</p>
+		<h1 class="name">{hero.name}</h1>
+		<p class="title">{hero.title}</p>
+		<p class="tagline">{hero.tagline}</p>
+		<a href="#projects" class="cta">View My Work</a>
+	</div>
 </section>
 
 <style>
@@ -24,14 +26,20 @@
 		max-width: 900px;
 		margin: 0 auto;
 	}
+	.card {
+		background: #0a0a0a;
+		border: 1px solid #003300;
+		border-radius: 16px;
+		padding: 48px 40px;
+	}
 	.greeting {
-		font-size: 1.1rem;
+		font-size: 1.725rem;
 		color: #00ff41;
 		margin-bottom: 12px;
 		font-weight: 500;
 	}
 	.name {
-		font-size: 3.5rem;
+		font-size: 4.125rem;
 		font-weight: 700;
 		color: #00ff41;
 		margin-bottom: 8px;
@@ -39,25 +47,25 @@
 		text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 	}
 	.title {
-		font-size: 1.5rem;
+		font-size: 2.125rem;
 		color: #00cc33;
 		margin-bottom: 16px;
 		font-weight: 600;
 	}
 	.tagline {
-		font-size: 1.25rem;
+		font-size: 1.875rem;
 		color: #008f11;
 		max-width: 600px;
 		margin-bottom: 32px;
 	}
 	.cta {
 		display: inline-block;
-		padding: 12px 32px;
+		padding: 14px 36px;
 		background: #00ff41;
 		color: #000000;
 		border-radius: 8px;
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 1.625rem;
 		text-decoration: none;
 		transition: background 0.2s, box-shadow 0.2s;
 	}

@@ -33,33 +33,41 @@
 
 <section id="contact">
 	<h2>Contact</h2>
-	<div class="layout">
-		<div class="info">
-			<p>Get in touch or find me on:</p>
-			<ul>
-				<li><a href="mailto:{contact.email}">{contact.email}</a></li>
-				<li><a href={contact.github} target="_blank" rel="noopener">GitHub</a></li>
-				<li><a href={contact.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
-			</ul>
+	<div class="card">
+		<div class="layout">
+			<div class="info">
+				<p>Get in touch or find me on:</p>
+				<ul>
+					<li><a href="mailto:{contact.email}">{contact.email}</a></li>
+					<li><a href={contact.github} target="_blank" rel="noopener">GitHub</a></li>
+					<li><a href={contact.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+				</ul>
+			</div>
+			<form onsubmit={handleSubmit}>
+				<input bind:value={name} placeholder="Name" required />
+				<input bind:value={email} type="email" placeholder="Email" required />
+				<textarea bind:value={message} placeholder="Message" rows="5" required></textarea>
+				<button type="submit" disabled={status === 'sending'}>
+					{status === 'sending' ? 'Sending...' : 'Send Message'}
+				</button>
+				{#if status === 'sent'}
+					<p class="success">Message sent! I'll get back to you soon.</p>
+				{/if}
+				{#if status === 'error'}
+					<p class="error-msg">Something went wrong. Please try again.</p>
+				{/if}
+			</form>
 		</div>
-		<form onsubmit={handleSubmit}>
-			<input bind:value={name} placeholder="Name" required />
-			<input bind:value={email} type="email" placeholder="Email" required />
-			<textarea bind:value={message} placeholder="Message" rows="5" required></textarea>
-			<button type="submit" disabled={status === 'sending'}>
-				{status === 'sending' ? 'Sending...' : 'Send Message'}
-			</button>
-			{#if status === 'sent'}
-				<p class="success">Message sent! I'll get back to you soon.</p>
-			{/if}
-			{#if status === 'error'}
-				<p class="error-msg">Something went wrong. Please try again.</p>
-			{/if}
-		</form>
 	</div>
 </section>
 
 <style>
+	.card {
+		background: #0a0a0a;
+		border: 1px solid #003300;
+		border-radius: 16px;
+		padding: 40px;
+	}
 	.layout {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -69,6 +77,7 @@
 	.info p {
 		color: #008f11;
 		margin-bottom: 16px;
+		font-size: 1.625rem;
 	}
 	.info ul {
 		list-style: none;
@@ -76,6 +85,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+	}
+	.info ul a {
+		font-size: 1.575rem;
 	}
 	form {
 		display: flex;
@@ -87,10 +99,10 @@
 		background: #0a0a0a;
 		border: 1px solid #003300;
 		border-radius: 8px;
-		padding: 12px 16px;
+		padding: 14px 16px;
 		color: #00cc33;
 		font-family: inherit;
-		font-size: 1rem;
+		font-size: 1.625rem;
 	}
 	input:focus,
 	textarea:focus {
@@ -103,9 +115,9 @@
 		color: #000000;
 		border: none;
 		border-radius: 8px;
-		padding: 12px 24px;
+		padding: 14px 24px;
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 1.625rem;
 		cursor: pointer;
 		transition: background 0.2s, box-shadow 0.2s;
 	}
@@ -120,9 +132,11 @@
 	.success {
 		color: #00ff41;
 		font-weight: 500;
+		font-size: 1.575rem;
 	}
 	.error-msg {
 		color: #ff3333;
 		font-weight: 500;
+		font-size: 1.575rem;
 	}
 </style>

@@ -8,6 +8,6 @@
 		padding: 40px 20px;
 		color: #003300;
 		border-top: 1px solid #003300;
-		font-size: 0.9rem;
+		font-size: 1.525rem;
 	}
 </style>

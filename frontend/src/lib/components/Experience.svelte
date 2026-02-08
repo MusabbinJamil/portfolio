@@ -46,22 +46,22 @@
 	}
 	h3 {
 		color: #00ff41;
-		font-size: 1.3rem;
+		font-size: 1.925rem;
 	}
 	.period {
 		color: #00ff41;
-		font-size: 0.9rem;
+		font-size: 1.525rem;
 		font-weight: 500;
 	}
 	.company {
 		color: #00cc33;
-		font-size: 1.05rem;
+		font-size: 1.675rem;
 		font-weight: 500;
 		margin-bottom: 12px;
 	}
 	.description {
 		color: #008f11;
 		line-height: 1.7;
-		font-size: 0.95rem;
+		font-size: 1.575rem;
 	}
 </style>

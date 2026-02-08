@@ -46,13 +46,14 @@
 	}
 	h3 {
 		color: #00ff41;
-		font-size: 1.3rem;
+		font-size: 1.925rem;
 		margin-bottom: 12px;
 	}
 	.description {
 		color: #008f11;
 		margin-bottom: 16px;
 		line-height: 1.6;
+		font-size: 1.575rem;
 	}
 	.tech {
 		display: flex;
@@ -67,7 +68,7 @@
 		color: #00ff41;
 		padding: 4px 12px;
 		border-radius: 4px;
-		font-size: 0.85rem;
+		font-size: 1.475rem;
 		font-weight: 500;
 		border: 1px solid #003300;
 	}
@@ -79,16 +80,16 @@
 	.links a {
 		color: #00ff41;
 		font-weight: 500;
-		font-size: 0.95rem;
+		font-size: 1.575rem;
 	}
 	.explore-btn {
 		background: #00ff41;
 		color: #000000 !important;
-		padding: 10px 32px;
+		padding: 12px 36px;
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 600;
-		font-size: 0.95rem;
+		font-size: 1.575rem;
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.explore-btn:hover {
