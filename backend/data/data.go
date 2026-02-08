@@ -130,7 +130,7 @@ func NewStore() *Store {
 				Title:       "Flask Dashboard",
 				Description: "A Flask-based interactive dashboard for data visualization and analytics.",
 				TechStack:   []string{"Python", "Flask", "HTML/CSS", "JavaScript"},
-				LiveURL:     "https://musabbinjamil.pythonanywhere.com",
+				LiveURL:     "https://musabjamil.pythonanywhere.com",
 			},
 		},
 		Experience: []Experience{
