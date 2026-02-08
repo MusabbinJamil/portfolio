@@ -74,4 +74,29 @@
 		box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
 		text-decoration: none;
 	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: 100px 16px 48px;
+		}
+		.card {
+			padding: 28px 20px;
+		}
+		.greeting {
+			font-size: 1rem;
+		}
+		.name {
+			font-size: 2.25rem;
+		}
+		.title {
+			font-size: 1.35rem;
+		}
+		.tagline {
+			font-size: 1.1rem;
+		}
+		.cta {
+			font-size: 1rem;
+			padding: 12px 28px;
+		}
+	}
 </style>

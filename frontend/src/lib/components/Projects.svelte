@@ -96,4 +96,26 @@
 		background: #33ff66;
 		box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
 	}
+
+	@media (max-width: 768px) {
+		.card {
+			padding: 20px;
+		}
+		h3 {
+			font-size: 1.3rem;
+		}
+		.description {
+			font-size: 0.95rem;
+		}
+		.tech li {
+			font-size: 0.85rem;
+		}
+		.links a {
+			font-size: 0.95rem;
+		}
+		.explore-btn {
+			font-size: 0.95rem;
+			padding: 10px 28px;
+		}
+	}
 </style>

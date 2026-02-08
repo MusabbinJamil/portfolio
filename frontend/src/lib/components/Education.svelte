@@ -66,4 +66,22 @@
 		line-height: 1.7;
 		font-size: 1.525rem;
 	}
+
+	@media (max-width: 768px) {
+		.edu-card {
+			padding: 20px;
+		}
+		h3 {
+			font-size: 1.2rem;
+		}
+		.year {
+			font-size: 0.9rem;
+		}
+		.institution {
+			font-size: 1.05rem;
+		}
+		.details {
+			font-size: 0.9rem;
+		}
+	}
 </style>

@@ -64,4 +64,22 @@
 		line-height: 1.7;
 		font-size: 1.575rem;
 	}
+
+	@media (max-width: 768px) {
+		.job {
+			padding: 20px;
+		}
+		h3 {
+			font-size: 1.3rem;
+		}
+		.period {
+			font-size: 0.9rem;
+		}
+		.company {
+			font-size: 1.05rem;
+		}
+		.description {
+			font-size: 0.95rem;
+		}
+	}
 </style>

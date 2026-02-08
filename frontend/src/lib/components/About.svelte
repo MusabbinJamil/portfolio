@@ -66,4 +66,26 @@
 		color: #00ff41;
 		margin-right: 8px;
 	}
+
+	@media (max-width: 768px) {
+		.card {
+			padding: 24px 20px;
+		}
+		.content {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+		.bio {
+			font-size: 1.05rem;
+		}
+		.skills-title {
+			font-size: 1.1rem;
+		}
+		.skills-list {
+			grid-template-columns: 1fr 1fr;
+		}
+		.skill {
+			font-size: 0.95rem;
+		}
+	}
 </style>

@@ -10,4 +10,11 @@
 		border-top: 1px solid #003300;
 		font-size: 1.525rem;
 	}
+
+	@media (max-width: 768px) {
+		footer {
+			font-size: 0.9rem;
+			padding: 24px 16px;
+		}
+	}
 </style>

@@ -139,4 +139,31 @@
 		font-weight: 500;
 		font-size: 1.575rem;
 	}
+
+	@media (max-width: 768px) {
+		.card {
+			padding: 24px 20px;
+		}
+		.layout {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+		.info p {
+			font-size: 1rem;
+		}
+		.info ul a {
+			font-size: 1rem;
+		}
+		input,
+		textarea {
+			font-size: 1rem;
+		}
+		button {
+			font-size: 1rem;
+		}
+		.success,
+		.error-msg {
+			font-size: 0.95rem;
+		}
+	}
 </style>
