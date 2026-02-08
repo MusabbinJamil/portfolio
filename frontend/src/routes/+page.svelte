@@ -8,11 +8,13 @@
 	import Education from '$lib/components/Education.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import MatrixRain from '$lib/components/MatrixRain.svelte';
 	import '../app.css';
 
 	let { data }: { data: PageData } = $props();
 </script>
 
+<MatrixRain />
 <Navbar />
 <main>
 	<Hero hero={data.hero} />

@@ -96,7 +96,7 @@ func NewStore() *Store {
 					"using evolutionary computation and LLMs. Includes ETL workflow, " +
 					"DB connectivity, and other data transformation utilities.",
 				TechStack: []string{"Python", "LLMs", "Evolutionary Computation", "ETL"},
-				LiveURL:   "https://fastmig.unmashable.online",
+				LiveURL:   "http://fastmig.unmashable.online",
 			},
 			{
 				ID:    2,
@@ -120,10 +120,10 @@ func NewStore() *Store {
 				TechStack: []string{"Python", "LLMs", "Probabilistic Reasoning"},
 			},
 			{
-				ID:    5,
-				Title: "Trike AI",
+				ID:          5,
+				Title:       "Trike AI",
 				Description: "An AI agent that can play the game of Trike using reinforcement learning.",
-				TechStack: []string{"Python", "Reinforcement Learning", "AI"},
+				TechStack:   []string{"Python", "Reinforcement Learning", "AI"},
 			},
 			{
 				ID:          6,

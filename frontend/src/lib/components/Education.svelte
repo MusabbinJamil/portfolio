@@ -29,14 +29,14 @@
 		gap: 24px;
 	}
 	.edu-card {
-		background: #1e293b;
+		background: #0a0a0a;
 		border-radius: 12px;
 		padding: 28px;
-		border: 1px solid #334155;
+		border: 1px solid #003300;
 		transition: border-color 0.2s;
 	}
 	.edu-card:hover {
-		border-color: #38bdf8;
+		border-color: #00ff41;
 	}
 	.header {
 		display: flex;
@@ -47,22 +47,22 @@
 		gap: 8px;
 	}
 	h3 {
-		color: #f8fafc;
+		color: #00ff41;
 		font-size: 1.2rem;
 	}
 	.year {
-		color: #38bdf8;
+		color: #00ff41;
 		font-size: 0.9rem;
 		font-weight: 500;
 	}
 	.institution {
-		color: #cbd5e1;
+		color: #00cc33;
 		font-size: 1.05rem;
 		font-weight: 500;
 		margin-bottom: 8px;
 	}
 	.details {
-		color: #94a3b8;
+		color: #008f11;
 		line-height: 1.7;
 		font-size: 0.9rem;
 	}

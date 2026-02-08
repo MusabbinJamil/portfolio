@@ -32,12 +32,12 @@
 		align-items: start;
 	}
 	.bio {
-		color: #94a3b8;
+		color: #008f11;
 		font-size: 1.05rem;
 		line-height: 1.8;
 	}
 	.skills-title {
-		color: #f8fafc;
+		color: #00ff41;
 		font-size: 1.1rem;
 		font-weight: 600;
 		margin-bottom: 16px;
@@ -50,12 +50,12 @@
 		padding: 0;
 	}
 	.skill {
-		color: #94a3b8;
+		color: #008f11;
 		font-size: 0.95rem;
 		padding: 6px 0;
 	}
 	.bullet {
-		color: #38bdf8;
+		color: #00ff41;
 		margin-right: 8px;
 	}
 </style>

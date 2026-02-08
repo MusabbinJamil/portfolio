@@ -67,7 +67,7 @@
 		align-items: start;
 	}
 	.info p {
-		color: #94a3b8;
+		color: #008f11;
 		margin-bottom: 16px;
 	}
 	.info ul {
@@ -84,43 +84,45 @@
 	}
 	input,
 	textarea {
-		background: #1e293b;
-		border: 1px solid #334155;
+		background: #0a0a0a;
+		border: 1px solid #003300;
 		border-radius: 8px;
 		padding: 12px 16px;
-		color: #e2e8f0;
+		color: #00cc33;
 		font-family: inherit;
 		font-size: 1rem;
 	}
 	input:focus,
 	textarea:focus {
 		outline: none;
-		border-color: #38bdf8;
+		border-color: #00ff41;
+		box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
 	}
 	button {
-		background: #38bdf8;
-		color: #0f172a;
+		background: #00ff41;
+		color: #000000;
 		border: none;
 		border-radius: 8px;
 		padding: 12px 24px;
 		font-weight: 600;
 		font-size: 1rem;
 		cursor: pointer;
-		transition: background 0.2s;
+		transition: background 0.2s, box-shadow 0.2s;
 	}
 	button:hover:not(:disabled) {
-		background: #7dd3fc;
+		background: #33ff66;
+		box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
 	}
 	button:disabled {
 		opacity: 0.6;
 		cursor: not-allowed;
 	}
 	.success {
-		color: #4ade80;
+		color: #00ff41;
 		font-weight: 500;
 	}
 	.error-msg {
-		color: #f87171;
+		color: #ff3333;
 		font-weight: 500;
 	}
 </style>

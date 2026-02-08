@@ -26,42 +26,44 @@
 	}
 	.greeting {
 		font-size: 1.1rem;
-		color: #38bdf8;
+		color: #00ff41;
 		margin-bottom: 12px;
 		font-weight: 500;
 	}
 	.name {
 		font-size: 3.5rem;
 		font-weight: 700;
-		color: #f8fafc;
+		color: #00ff41;
 		margin-bottom: 8px;
 		line-height: 1.2;
+		text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 	}
 	.title {
 		font-size: 1.5rem;
-		color: #cbd5e1;
+		color: #00cc33;
 		margin-bottom: 16px;
 		font-weight: 600;
 	}
 	.tagline {
 		font-size: 1.25rem;
-		color: #94a3b8;
+		color: #008f11;
 		max-width: 600px;
 		margin-bottom: 32px;
 	}
 	.cta {
 		display: inline-block;
 		padding: 12px 32px;
-		background: #38bdf8;
-		color: #0f172a;
+		background: #00ff41;
+		color: #000000;
 		border-radius: 8px;
 		font-weight: 600;
 		font-size: 1rem;
 		text-decoration: none;
-		transition: background 0.2s;
+		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.cta:hover {
-		background: #7dd3fc;
+		background: #33ff66;
+		box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
 		text-decoration: none;
 	}
 </style>
