@@ -77,16 +77,15 @@ func NewStore() *Store {
 		},
 		About: AboutData{
 			Bio: "Full stack developer with hands-on experience in web development, " +
-				"data engineering, and analysis. Currently pursuing MS Data Sciences at IBA Karachi " +
-				"while working as a Junior Full Stack Developer at SmartB Solutions. " +
+				"data engineering, and analysis. MS Data Sciences graduate from IBA Karachi, " +
+				"currently working as a Junior Full Stack Developer at SmartB Solutions. " +
 				"I've built everything from Django backends and ecommerce integrations " +
 				"to ETL pipelines and LLM-powered tools. Fast learner, tech savvy, and always eager to improve.",
 			Skills: []string{
-				"Python", "Django", "Flask", "JavaScript",
-				"React.js", "Node.js", "HTML/CSS", "C++",
-				"SQL", "PostgreSQL", "MongoDB", "Git",
-				"Linux", "Docker", "Selenium", "Airflow",
-				"Scikit-learn", "Power BI", "Streamlit", "REST APIs",
+				"Python", "JavaScript", "C++", "SQL", "HTML/CSS", "Go",
+				"Django", "Flask", "React.js", "Node.js", "Svelte",
+				"PostgreSQL", "MongoDB", "Docker", "Git", "Linux", "REST APIs",
+				"Selenium", "Airflow", "Scikit-learn", "Power BI", "Streamlit",
 			},
 		},
 		Projects: []Project{
@@ -97,6 +96,7 @@ func NewStore() *Store {
 					"using evolutionary computation and LLMs. Includes ETL workflow, " +
 					"DB connectivity, and other data transformation utilities.",
 				TechStack: []string{"Python", "LLMs", "Evolutionary Computation", "ETL"},
+				LiveURL:   "https://fastmig.unmashable.online",
 			},
 			{
 				ID:    2,
@@ -124,6 +124,13 @@ func NewStore() *Store {
 				Title: "Trike AI",
 				Description: "An AI agent that can play the game of Trike using reinforcement learning.",
 				TechStack: []string{"Python", "Reinforcement Learning", "AI"},
+			},
+			{
+				ID:          6,
+				Title:       "Flask Dashboard",
+				Description: "A Flask-based interactive dashboard for data visualization and analytics.",
+				TechStack:   []string{"Python", "Flask", "HTML/CSS", "JavaScript"},
+				LiveURL:     "https://musabbinjamil.pythonanywhere.com",
 			},
 		},
 		Experience: []Experience{
@@ -176,7 +183,7 @@ func NewStore() *Store {
 				ID:          1,
 				Degree:      "MS Data Sciences",
 				Institution: "Institute of Business Administration (IBA), Karachi",
-				Year:        "Expected 2026",
+				Year:        "2026",
 				Details:     "Core Courses: Data Analytics & Warehousing, Machine Learning I & II, Deep Learning, Computational Intelligence, Probabilistic Reasoning, DevOps",
 			},
 			{
@@ -195,7 +202,7 @@ func NewStore() *Store {
 		},
 		Contact: ContactInfo{
 			Email:    "musabjamil3@gmail.com",
-			Github:   "https://github.com/musab",
+			Github:   "https://github.com/MusabbinJamil",
 			LinkedIn: "https://www.linkedin.com/in/musab-b-630256b4/",
 		},
 		Messages: []ContactMessage{},

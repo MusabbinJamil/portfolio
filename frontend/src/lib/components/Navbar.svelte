@@ -1,5 +1,8 @@
 <nav>
-	<div class="logo">Musab</div>
+	<div class="logo">
+		<img src="/logo.jpg" alt="Logo" />
+		Musab
+	</div>
 	<ul class="links">
 		<li><a href="#about">About</a></li>
 		<li><a href="#experience">Experience</a></li>
@@ -27,6 +30,13 @@
 		font-size: 1.4rem;
 		font-weight: 700;
 		color: #38bdf8;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.logo img {
+		height: 36px;
+		width: auto;
 	}
 	.links {
 		display: flex;
