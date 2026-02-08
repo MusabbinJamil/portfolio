@@ -132,6 +132,13 @@ func NewStore() *Store {
 				TechStack:   []string{"Python", "Flask", "HTML/CSS", "JavaScript"},
 				LiveURL:     "https://musabjamil.pythonanywhere.com",
 			},
+			{
+				ID:          7,
+				Title:       "Chatta Patti",
+				Description: "A WordPress-based website for Chatta Patti, a brand offering customized stationery and lifestyle products.",
+				TechStack:   []string{"WordPress", "PHP", "CSS"},
+				LiveURL:     "https://chattapatti.com",
+			},
 		},
 		Experience: []Experience{
 			{
