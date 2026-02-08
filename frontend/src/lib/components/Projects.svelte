@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$lib/types';
+	import { trackClick } from '$lib/analytics';
 
 	let { projects }: { projects: Project[] } = $props();
 </script>
@@ -18,10 +19,12 @@
 				</ul>
 				<div class="links">
 					{#if project.githubUrl}
-						<a href={project.githubUrl} target="_blank" rel="noopener">GitHub</a>
+						<a href={project.githubUrl} target="_blank" rel="noopener"
+							onclick={() => trackClick(`project:${project.title}:github`, `${project.title} GitHub link`)}>GitHub</a>
 					{/if}
 					{#if project.liveUrl}
-						<a class="explore-btn" href={project.liveUrl} target="_blank" rel="noopener">Explore</a>
+						<a class="explore-btn" href={project.liveUrl} target="_blank" rel="noopener"
+							onclick={() => trackClick(`project:${project.title}:live`, `${project.title} Explore button`)}>Explore</a>
 					{/if}
 				</div>
 			</article>

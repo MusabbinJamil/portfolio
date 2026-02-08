@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { HeroData } from '$lib/types';
+	import { trackClick } from '$lib/analytics';
 
 	let { hero }: { hero: HeroData } = $props();
 </script>
@@ -10,7 +11,7 @@
 		<h1 class="name">{hero.name}</h1>
 		<p class="title">{hero.title}</p>
 		<p class="tagline">{hero.tagline}</p>
-		<a href="#projects" class="cta">View My Work</a>
+		<a href="#projects" class="cta" onclick={() => trackClick('hero:cta', 'View My Work button')}>View My Work</a>
 	</div>
 </section>
 

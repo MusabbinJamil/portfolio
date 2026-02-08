@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ContactInfo } from '$lib/types';
+	import { trackClick } from '$lib/analytics';
 
 	let { contact }: { contact: ContactInfo } = $props();
 
@@ -10,6 +11,7 @@
 
 	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
+		trackClick('contact:submit', 'Contact form submit');
 		status = 'sending';
 
 		try {
@@ -38,9 +40,9 @@
 			<div class="info">
 				<p>Get in touch or find me on:</p>
 				<ul>
-					<li><a href="mailto:{contact.email}">{contact.email}</a></li>
-					<li><a href={contact.github} target="_blank" rel="noopener">GitHub</a></li>
-					<li><a href={contact.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+					<li><a href="mailto:{contact.email}" onclick={() => trackClick('contact:email', 'Email link')}>{contact.email}</a></li>
+					<li><a href={contact.github} target="_blank" rel="noopener" onclick={() => trackClick('contact:github', 'GitHub link')}>GitHub</a></li>
+					<li><a href={contact.linkedin} target="_blank" rel="noopener" onclick={() => trackClick('contact:linkedin', 'LinkedIn link')}>LinkedIn</a></li>
 				</ul>
 			</div>
 			<form onsubmit={handleSubmit}>

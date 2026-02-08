@@ -28,6 +28,10 @@ func cors(next http.HandlerFunc) http.HandlerFunc {
 func main() {
 	store := data.NewStore()
 
+	if err := handlers.LoadAnalyticsFromCSV(store); err != nil {
+		log.Printf("Warning: could not load analytics CSV: %v", err)
+	}
+
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /api/hero", cors(handlers.Hero(store)))
@@ -37,6 +41,9 @@ func main() {
 	mux.HandleFunc("GET /api/education", cors(handlers.Education(store)))
 	mux.HandleFunc("GET /api/contact", cors(handlers.ContactInfo(store)))
 	mux.HandleFunc("POST /api/contact", cors(handlers.ContactSubmit(store)))
+
+	mux.HandleFunc("POST /api/analytics", cors(handlers.AnalyticsTrack(store)))
+	mux.HandleFunc("GET /api/analytics", cors(handlers.AnalyticsGet(store)))
 
 	mux.HandleFunc("GET /api/health", cors(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")

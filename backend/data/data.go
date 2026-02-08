@@ -50,6 +50,16 @@ type ContactMessage struct {
 	Message string `json:"message"`
 }
 
+type AnalyticsEvent struct {
+	Timestamp string `json:"timestamp"`
+	IP        string `json:"ip"`
+	UserAgent string `json:"userAgent"`
+	EventType string `json:"eventType"`
+	Target    string `json:"target"`
+	Label     string `json:"label"`
+	Referrer  string `json:"referrer"`
+}
+
 type Store struct {
 	Hero       HeroData
 	About      AboutData
@@ -60,12 +70,29 @@ type Store struct {
 
 	mu       sync.Mutex
 	Messages []ContactMessage
+
+	analyticsMu sync.Mutex
+	Events      []AnalyticsEvent
 }
 
 func (s *Store) AddMessage(msg ContactMessage) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 	s.Messages = append(s.Messages, msg)
+}
+
+func (s *Store) AddEvent(event AnalyticsEvent) {
+	s.analyticsMu.Lock()
+	defer s.analyticsMu.Unlock()
+	s.Events = append(s.Events, event)
+}
+
+func (s *Store) GetEvents() []AnalyticsEvent {
+	s.analyticsMu.Lock()
+	defer s.analyticsMu.Unlock()
+	events := make([]AnalyticsEvent, len(s.Events))
+	copy(events, s.Events)
+	return events
 }
 
 func NewStore() *Store {
@@ -139,6 +166,15 @@ func NewStore() *Store {
 				Description: "A WordPress-based website for Chatta Patti, a brand offering customized fashion products.",
 				TechStack:   []string{"WordPress", "PHP", "CSS"},
 				LiveURL:     "https://chattapatti.com",
+			},
+			{
+				ID:    8,
+				Title: "Persona Based Insight Chat",
+				Description: "A persona-based AI chat tool that lets users upload CSV data and query it " +
+					"through natural language. Built with Azure OpenAI for intelligent responses " +
+					"and a CSV data handling pipeline for seamless data ingestion and exploration.",
+				TechStack: []string{"Python", "Azure OpenAI", "CSV Pipeline", "AI Chat"},
+				LiveURL:   "http://needtechlab.maccestech.com/action?name=ai_chat",
 			},
 		},
 		Experience: []Experience{
@@ -214,5 +250,6 @@ func NewStore() *Store {
 			LinkedIn: "https://www.linkedin.com/in/musab-b-630256b4/",
 		},
 		Messages: []ContactMessage{},
+		Events:   []AnalyticsEvent{},
 	}
 }

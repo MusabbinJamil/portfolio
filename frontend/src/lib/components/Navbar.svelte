@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { trackClick } from '$lib/analytics';
+
 	let menuOpen = $state(false);
 
-	function closeMenu() {
+	function handleNavClick(section: string) {
+		trackClick(`nav:${section}`, `${section} nav link`);
 		menuOpen = false;
 	}
 </script>
@@ -14,11 +17,11 @@
 		<span class="bar"></span>
 	</button>
 	<ul class="links" class:open={menuOpen}>
-		<li><a href="#about" onclick={closeMenu}>About</a></li>
-		<li><a href="#experience" onclick={closeMenu}>Experience</a></li>
-		<li><a href="#projects" onclick={closeMenu}>Projects</a></li>
-		<li><a href="#education" onclick={closeMenu}>Education</a></li>
-		<li><a href="#contact" onclick={closeMenu}>Contact</a></li>
+		<li><a href="#about" onclick={() => handleNavClick('about')}>About</a></li>
+		<li><a href="#experience" onclick={() => handleNavClick('experience')}>Experience</a></li>
+		<li><a href="#projects" onclick={() => handleNavClick('projects')}>Projects</a></li>
+		<li><a href="#education" onclick={() => handleNavClick('education')}>Education</a></li>
+		<li><a href="#contact" onclick={() => handleNavClick('contact')}>Contact</a></li>
 	</ul>
 </nav>
 

@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import { trackPageView } from '$lib/analytics';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
@@ -12,6 +14,10 @@
 	import '../app.css';
 
 	let { data }: { data: PageData } = $props();
+
+	onMount(() => {
+		trackPageView();
+	});
 </script>
 
 <MatrixRain />
