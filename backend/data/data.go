@@ -135,7 +135,7 @@ func NewStore() *Store {
 			{
 				ID:          7,
 				Title:       "Chatta Patti",
-				Description: "A WordPress-based website for Chatta Patti, a brand offering customized stationery and lifestyle products.",
+				Description: "A WordPress-based website for Chatta Patti, a brand offering customized fashion products.",
 				TechStack:   []string{"WordPress", "PHP", "CSS"},
 				LiveURL:     "https://chattapatti.com",
 			},
