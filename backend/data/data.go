@@ -96,7 +96,7 @@ func NewStore() *Store {
 					"using evolutionary computation and LLMs. Includes ETL workflow, " +
 					"DB connectivity, and other data transformation utilities.",
 				TechStack: []string{"Python", "LLMs", "Evolutionary Computation", "ETL"},
-				LiveURL:   "http://fastmig.unmashable.online",
+				LiveURL:   "https://fastmig.musabjamil.me",
 			},
 			{
 				ID:    2,
