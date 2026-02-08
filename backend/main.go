@@ -33,6 +33,8 @@ func main() {
 	mux.HandleFunc("GET /api/hero", cors(handlers.Hero(store)))
 	mux.HandleFunc("GET /api/about", cors(handlers.About(store)))
 	mux.HandleFunc("GET /api/projects", cors(handlers.Projects(store)))
+	mux.HandleFunc("GET /api/experience", cors(handlers.Experience(store)))
+	mux.HandleFunc("GET /api/education", cors(handlers.Education(store)))
 	mux.HandleFunc("GET /api/contact", cors(handlers.ContactInfo(store)))
 	mux.HandleFunc("POST /api/contact", cors(handlers.ContactSubmit(store)))
 

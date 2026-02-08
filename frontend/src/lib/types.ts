@@ -18,6 +18,22 @@ export interface Project {
 	githubUrl?: string;
 }
 
+export interface Experience {
+	id: number;
+	role: string;
+	company: string;
+	period: string;
+	description: string;
+}
+
+export interface Education {
+	id: number;
+	degree: string;
+	institution: string;
+	year: string;
+	details?: string;
+}
+
 export interface ContactInfo {
 	email: string;
 	github: string;
