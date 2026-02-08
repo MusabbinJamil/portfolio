@@ -86,6 +86,7 @@ func NewStore() *Store {
 				"Django", "Flask", "React.js", "Node.js", "Svelte",
 				"PostgreSQL", "MongoDB", "Docker", "Git", "Linux", "REST APIs",
 				"Selenium", "Airflow", "Scikit-learn", "Power BI", "Streamlit",
+				"WordPress",
 			},
 		},
 		Projects: []Project{
