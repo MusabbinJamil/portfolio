@@ -146,6 +146,7 @@ func NewStore() *Store {
 				Description: "An interface to load data and get feedback based on multiple " +
 					"user-defined personas, with verification on LLM answers using probabilistic reasoning.",
 				TechStack: []string{"Python", "LLMs", "Probabilistic Reasoning"},
+				LiveURL:   "http://needtechlab.maccestech.com/action?name=persona",
 			},
 			{
 				ID:          5,
