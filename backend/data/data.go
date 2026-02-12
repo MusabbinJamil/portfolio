@@ -45,9 +45,10 @@ type ContactInfo struct {
 }
 
 type ContactMessage struct {
-	Name    string `json:"name"`
-	Email   string `json:"email"`
-	Message string `json:"message"`
+	Timestamp string `json:"timestamp,omitempty"`
+	Name      string `json:"name"`
+	Email     string `json:"email"`
+	Message   string `json:"message"`
 }
 
 type AnalyticsEvent struct {
@@ -81,6 +82,14 @@ func (s *Store) AddMessage(msg ContactMessage) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 	s.Messages = append(s.Messages, msg)
+}
+
+func (s *Store) GetMessages() []ContactMessage {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	msgs := make([]ContactMessage, len(s.Messages))
+	copy(msgs, s.Messages)
+	return msgs
 }
 
 func (s *Store) AddEvent(event AnalyticsEvent) {

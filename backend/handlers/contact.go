@@ -17,6 +17,61 @@ func ContactInfo(store *data.Store) http.HandlerFunc {
 	}
 }
 
+func MessagesGet(store *data.Store) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		expectedKey := os.Getenv("ANALYTICS_KEY")
+		if expectedKey == "" {
+			http.Error(w, `{"error":"endpoint not configured"}`, http.StatusForbidden)
+			return
+		}
+
+		providedKey := r.URL.Query().Get("key")
+		if providedKey != expectedKey {
+			http.Error(w, `{"error":"unauthorized"}`, http.StatusForbidden)
+			return
+		}
+
+		messages := store.GetMessages()
+
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(map[string]interface{}{
+			"total":    len(messages),
+			"messages": messages,
+		})
+	}
+}
+
+func LoadMessagesFromCSV(store *data.Store) error {
+	filePath := "messages.csv"
+	f, err := os.Open(filePath)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil
+		}
+		return err
+	}
+	defer f.Close()
+
+	reader := csv.NewReader(f)
+	records, err := reader.ReadAll()
+	if err != nil {
+		return err
+	}
+
+	for _, record := range records[1:] {
+		if len(record) < 4 {
+			continue
+		}
+		store.AddMessage(data.ContactMessage{
+			Timestamp: record[0],
+			Name:      record[1],
+			Email:     record[2],
+			Message:   record[3],
+		})
+	}
+	return nil
+}
+
 func ContactSubmit(store *data.Store) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var msg data.ContactMessage
@@ -30,6 +85,7 @@ func ContactSubmit(store *data.Store) http.HandlerFunc {
 			return
 		}
 
+		msg.Timestamp = time.Now().UTC().Format(time.RFC3339)
 		store.AddMessage(msg)
 
 		if err := saveToCSV(msg); err != nil {
@@ -70,7 +126,7 @@ func saveToCSV(msg data.ContactMessage) error {
 	}
 
 	return w.Write([]string{
-		time.Now().Format(time.RFC3339),
+		msg.Timestamp,
 		msg.Name,
 		msg.Email,
 		msg.Message,

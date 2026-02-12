@@ -31,6 +31,9 @@ func main() {
 	if err := handlers.LoadAnalyticsFromCSV(store); err != nil {
 		log.Printf("Warning: could not load analytics CSV: %v", err)
 	}
+	if err := handlers.LoadMessagesFromCSV(store); err != nil {
+		log.Printf("Warning: could not load messages CSV: %v", err)
+	}
 
 	mux := http.NewServeMux()
 
@@ -41,6 +44,8 @@ func main() {
 	mux.HandleFunc("GET /api/education", cors(handlers.Education(store)))
 	mux.HandleFunc("GET /api/contact", cors(handlers.ContactInfo(store)))
 	mux.HandleFunc("POST /api/contact", cors(handlers.ContactSubmit(store)))
+
+	mux.HandleFunc("GET /api/messages", cors(handlers.MessagesGet(store)))
 
 	mux.HandleFunc("POST /api/analytics", cors(handlers.AnalyticsTrack(store)))
 	mux.HandleFunc("GET /api/analytics", cors(handlers.AnalyticsGet(store)))
