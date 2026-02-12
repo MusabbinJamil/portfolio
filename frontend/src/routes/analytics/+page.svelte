@@ -20,6 +20,10 @@
 	let authenticated = $state(false);
 	let loading = $state(false);
 
+	let pageviews = $derived(events.filter(e => e.eventType === 'pageview').length);
+	let clicks = $derived(events.filter(e => e.eventType === 'click').length);
+	let countries = $derived([...new Set(events.map(e => e.country).filter(Boolean))]);
+
 	async function login(e: SubmitEvent) {
 		e.preventDefault();
 		error = '';
@@ -93,9 +97,6 @@
 		</div>
 
 		<div class="stats">
-			{@const pageviews = events.filter(e => e.eventType === 'pageview').length}
-			{@const clicks = events.filter(e => e.eventType === 'click').length}
-			{@const countries = [...new Set(events.map(e => e.country).filter(Boolean))]}
 			<div class="stat-card">
 				<div class="stat-value">{pageviews}</div>
 				<div class="stat-label">pageviews</div>
