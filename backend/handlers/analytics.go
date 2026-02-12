@@ -36,6 +36,62 @@ func hashIP(ip string) string {
 	return hex.EncodeToString(h[:])
 }
 
+// geolocation lookup
+
+type geoResult struct {
+	Country string
+	City    string
+}
+
+var (
+	geoCacheMu sync.Mutex
+	geoCache   = make(map[string]geoResult)
+)
+
+var geoLimiter = newRateLimiter(40, time.Minute)
+
+type ipAPIResponse struct {
+	Status  string `json:"status"`
+	Country string `json:"country"`
+	City    string `json:"city"`
+}
+
+func lookupGeo(rawIP string) (country, city string) {
+	geoCacheMu.Lock()
+	if cached, ok := geoCache[rawIP]; ok {
+		geoCacheMu.Unlock()
+		return cached.Country, cached.City
+	}
+	geoCacheMu.Unlock()
+
+	if !geoLimiter.allow("global") {
+		return "", ""
+	}
+
+	client := &http.Client{Timeout: 2 * time.Second}
+	resp, err := client.Get("http://ip-api.com/json/" + rawIP + "?fields=status,country,city")
+	if err != nil {
+		log.Printf("Geolocation lookup failed: %v", err)
+		return "", ""
+	}
+	defer resp.Body.Close()
+
+	var result ipAPIResponse
+	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
+		return "", ""
+	}
+
+	if result.Status != "success" {
+		return "", ""
+	}
+
+	geoCacheMu.Lock()
+	geoCache[rawIP] = geoResult{Country: result.Country, City: result.City}
+	geoCacheMu.Unlock()
+
+	return result.Country, result.City
+}
+
 // rate limiter
 
 type rateLimiter struct {
@@ -148,6 +204,8 @@ func AnalyticsTrack(store *data.Store) http.HandlerFunc {
 			req.Referrer = req.Referrer[:500]
 		}
 
+		country, city := lookupGeo(clientIP)
+
 		event := data.AnalyticsEvent{
 			Timestamp: time.Now().UTC().Format(time.RFC3339),
 			IP:        hashIP(clientIP),
@@ -156,6 +214,8 @@ func AnalyticsTrack(store *data.Store) http.HandlerFunc {
 			Target:    req.Target,
 			Label:     req.Label,
 			Referrer:  req.Referrer,
+			Country:   country,
+			City:      city,
 		}
 
 		store.AddEvent(event)
@@ -212,7 +272,7 @@ func saveAnalyticsToCSV(event data.AnalyticsEvent) error {
 	defer w.Flush()
 
 	if isNew {
-		if err := w.Write([]string{"timestamp", "ip", "user_agent", "event_type", "target", "label", "referrer"}); err != nil {
+		if err := w.Write([]string{"timestamp", "ip", "user_agent", "event_type", "target", "label", "referrer", "country", "city"}); err != nil {
 			return err
 		}
 	}
@@ -225,6 +285,8 @@ func saveAnalyticsToCSV(event data.AnalyticsEvent) error {
 		event.Target,
 		event.Label,
 		event.Referrer,
+		event.Country,
+		event.City,
 	})
 }
 
@@ -240,6 +302,7 @@ func LoadAnalyticsFromCSV(store *data.Store) error {
 	defer f.Close()
 
 	reader := csv.NewReader(f)
+	reader.FieldsPerRecord = -1
 	records, err := reader.ReadAll()
 	if err != nil {
 		return err
@@ -249,7 +312,7 @@ func LoadAnalyticsFromCSV(store *data.Store) error {
 		if len(record) < 7 {
 			continue
 		}
-		store.AddEvent(data.AnalyticsEvent{
+		event := data.AnalyticsEvent{
 			Timestamp: record[0],
 			IP:        record[1],
 			UserAgent: record[2],
@@ -257,7 +320,12 @@ func LoadAnalyticsFromCSV(store *data.Store) error {
 			Target:    record[4],
 			Label:     record[5],
 			Referrer:  record[6],
-		})
+		}
+		if len(record) >= 9 {
+			event.Country = record[7]
+			event.City = record[8]
+		}
+		store.AddEvent(event)
 	}
 	return nil
 }

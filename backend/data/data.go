@@ -58,6 +58,8 @@ type AnalyticsEvent struct {
 	Target    string `json:"target"`
 	Label     string `json:"label"`
 	Referrer  string `json:"referrer"`
+	Country   string `json:"country"`
+	City      string `json:"city"`
 }
 
 type Store struct {
