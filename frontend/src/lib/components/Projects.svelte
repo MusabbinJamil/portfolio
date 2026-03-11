@@ -18,14 +18,8 @@
 					{/each}
 				</ul>
 				<div class="links">
-					{#if project.githubUrl}
-						<a href={project.githubUrl} target="_blank" rel="noopener"
-							onclick={() => trackClick(`project:${project.title}:github`, `${project.title} GitHub link`)}>GitHub</a>
-					{/if}
-					{#if project.liveUrl}
-						<a class="explore-btn" href={project.liveUrl} target="_blank" rel="noopener"
-							onclick={() => trackClick(`project:${project.title}:live`, `${project.title} Explore button`)}>Explore</a>
-					{/if}
+					<a class="explore-btn" href={project.liveUrl || project.githubUrl} target="_blank" rel="noopener"
+						onclick={() => trackClick(`project:${project.title}:explore`, `${project.title} Explore button`)}>Explore</a>
 				</div>
 			</article>
 		{/each}
