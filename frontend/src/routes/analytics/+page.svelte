@@ -149,18 +149,18 @@
 	}
 
 	.login-box {
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 12px;
 		padding: 48px;
 		text-align: center;
 		max-width: 400px;
 		width: 100%;
 		background: #ffffff;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 
 	.login-box h1 {
-		color: #907aa9;
+		color: #4a8c64;
 		font-size: 1.8rem;
 		margin-bottom: 32px;
 	}
@@ -168,10 +168,10 @@
 	input {
 		width: 100%;
 		padding: 12px 16px;
-		background: #faf5ff;
-		border: 1px solid #e8dff5;
+		background: #f0faf4;
+		border: 1px solid #d4edda;
 		border-radius: 8px;
-		color: #575279;
+		color: #3d5a47;
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		outline: none;
@@ -179,27 +179,27 @@
 	}
 
 	input:focus {
-		border-color: #c4a7e7;
+		border-color: #7bc89b;
 	}
 
 	input::placeholder {
-		color: #9893a5;
+		color: #7a9484;
 	}
 
 	button {
 		width: 100%;
 		padding: 12px;
 		background: transparent;
-		border: 1px solid #c4a7e7;
+		border: 1px solid #7bc89b;
 		border-radius: 8px;
-		color: #907aa9;
+		color: #4a8c64;
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		cursor: pointer;
 	}
 
 	button:hover {
-		background: rgba(196, 167, 231, 0.1);
+		background: rgba(123, 200, 155, 0.1);
 	}
 
 	button:disabled {
@@ -227,12 +227,12 @@
 	}
 
 	.header h1 {
-		color: #907aa9;
+		color: #4a8c64;
 		font-size: 1.8rem;
 	}
 
 	.total {
-		color: #9893a5;
+		color: #7a9484;
 		font-size: 1rem;
 	}
 
@@ -244,22 +244,22 @@
 	}
 
 	.stat-card {
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 8px;
 		padding: 20px;
 		text-align: center;
 		background: #ffffff;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 
 	.stat-value {
-		color: #907aa9;
+		color: #4a8c64;
 		font-size: 2rem;
 		font-weight: 700;
 	}
 
 	.stat-label {
-		color: #9893a5;
+		color: #7a9484;
 		font-size: 0.85rem;
 		margin-top: 4px;
 	}
@@ -277,21 +277,21 @@
 	th {
 		text-align: left;
 		padding: 12px 16px;
-		color: #907aa9;
-		border-bottom: 1px solid #e8dff5;
+		color: #4a8c64;
+		border-bottom: 1px solid #d4edda;
 		white-space: nowrap;
 		font-weight: 600;
 	}
 
 	td {
 		padding: 10px 16px;
-		border-bottom: 1px solid #f0e8fa;
-		color: #575279;
+		border-bottom: 1px solid #e8f5ed;
+		color: #3d5a47;
 		white-space: nowrap;
 	}
 
 	tr:hover td {
-		background: #faf5ff;
+		background: #f0faf4;
 	}
 
 	.badge {
@@ -302,13 +302,13 @@
 	}
 
 	.badge.pageview {
-		background: rgba(196, 167, 231, 0.15);
-		color: #907aa9;
+		background: rgba(123, 200, 155, 0.15);
+		color: #4a8c64;
 	}
 
 	.badge.click {
-		background: rgba(156, 207, 216, 0.2);
-		color: #56949f;
+		background: rgba(93, 184, 126, 0.15);
+		color: #3d7a52;
 	}
 
 	.ua {

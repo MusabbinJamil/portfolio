@@ -66,10 +66,10 @@
 <style>
 	.card {
 		background: #ffffff;
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 16px;
 		padding: 40px;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 	.layout {
 		display: grid;
@@ -78,7 +78,7 @@
 		align-items: start;
 	}
 	.info p {
-		color: #6e6a86;
+		color: #5a7a64;
 		margin-bottom: 16px;
 		font-size: 1.625rem;
 	}
@@ -99,26 +99,26 @@
 	}
 	input,
 	textarea {
-		background: #faf5ff;
-		border: 1px solid #e8dff5;
+		background: #f0faf4;
+		border: 1px solid #d4edda;
 		border-radius: 8px;
 		padding: 14px 16px;
-		color: #575279;
+		color: #3d5a47;
 		font-family: inherit;
 		font-size: 1.625rem;
 	}
 	input:focus,
 	textarea:focus {
 		outline: none;
-		border-color: #c4a7e7;
-		box-shadow: 0 0 8px rgba(196, 167, 231, 0.3);
+		border-color: #7bc89b;
+		box-shadow: 0 0 8px rgba(123, 200, 155, 0.3);
 	}
 	input::placeholder,
 	textarea::placeholder {
-		color: #9893a5;
+		color: #7a9484;
 	}
 	button {
-		background: #c4a7e7;
+		background: #7bc89b;
 		color: #ffffff;
 		border: none;
 		border-radius: 8px;
@@ -129,15 +129,15 @@
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	button:hover:not(:disabled) {
-		background: #b08fd6;
-		box-shadow: 0 4px 16px rgba(196, 167, 231, 0.35);
+		background: #5db87e;
+		box-shadow: 0 4px 16px rgba(123, 200, 155, 0.35);
 	}
 	button:disabled {
 		opacity: 0.6;
 		cursor: not-allowed;
 	}
 	.success {
-		color: #56949f;
+		color: #4a8c64;
 		font-weight: 500;
 		font-size: 1.575rem;
 	}

@@ -29,10 +29,10 @@
 <style>
 	.card {
 		background: #ffffff;
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 16px;
 		padding: 40px;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 	.content {
 		display: grid;
@@ -41,12 +41,12 @@
 		align-items: start;
 	}
 	.bio {
-		color: #6e6a86;
+		color: #5a7a64;
 		font-size: 1.675rem;
 		line-height: 1.8;
 	}
 	.skills-title {
-		color: #907aa9;
+		color: #4a8c64;
 		font-size: 1.725rem;
 		font-weight: 600;
 		margin-bottom: 16px;
@@ -59,12 +59,12 @@
 		padding: 0;
 	}
 	.skill {
-		color: #6e6a86;
+		color: #5a7a64;
 		font-size: 1.05rem;
 		padding: 6px 0;
 	}
 	.bullet {
-		color: #c4a7e7;
+		color: #7bc89b;
 		margin-right: 8px;
 	}
 

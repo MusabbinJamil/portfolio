@@ -13,7 +13,7 @@
 		}
 
 		const symbols = ['~', '*', '.', '+', 'o', ':', '^'];
-		const colors = ['#c4a7e7', '#ebbcba', '#f6c177', '#9ccfd8', '#c4a7e7'];
+		const colors = ['#7bc89b', '#a8ddb8', '#5db87e', '#b8e6c8', '#9ccfd8'];
 
 		interface Particle {
 			x: number;

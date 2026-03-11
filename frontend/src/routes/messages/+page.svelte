@@ -102,18 +102,18 @@
 	}
 
 	.login-box {
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 12px;
 		padding: 48px;
 		text-align: center;
 		max-width: 400px;
 		width: 100%;
 		background: #ffffff;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 
 	.login-box h1 {
-		color: #907aa9;
+		color: #4a8c64;
 		font-size: 1.8rem;
 		margin-bottom: 32px;
 	}
@@ -121,10 +121,10 @@
 	input {
 		width: 100%;
 		padding: 12px 16px;
-		background: #faf5ff;
-		border: 1px solid #e8dff5;
+		background: #f0faf4;
+		border: 1px solid #d4edda;
 		border-radius: 8px;
-		color: #575279;
+		color: #3d5a47;
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		outline: none;
@@ -132,27 +132,27 @@
 	}
 
 	input:focus {
-		border-color: #c4a7e7;
+		border-color: #7bc89b;
 	}
 
 	input::placeholder {
-		color: #9893a5;
+		color: #7a9484;
 	}
 
 	button {
 		width: 100%;
 		padding: 12px;
 		background: transparent;
-		border: 1px solid #c4a7e7;
+		border: 1px solid #7bc89b;
 		border-radius: 8px;
-		color: #907aa9;
+		color: #4a8c64;
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		cursor: pointer;
 	}
 
 	button:hover {
-		background: rgba(196, 167, 231, 0.1);
+		background: rgba(123, 200, 155, 0.1);
 	}
 
 	button:disabled {
@@ -180,17 +180,17 @@
 	}
 
 	.header h1 {
-		color: #907aa9;
+		color: #4a8c64;
 		font-size: 1.8rem;
 	}
 
 	.total {
-		color: #9893a5;
+		color: #7a9484;
 		font-size: 1rem;
 	}
 
 	.empty {
-		color: #9893a5;
+		color: #7a9484;
 		text-align: center;
 		padding: 40px;
 	}
@@ -202,15 +202,15 @@
 	}
 
 	.message-card {
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 8px;
 		padding: 20px;
 		background: #ffffff;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 
 	.message-card:hover {
-		border-color: #c4a7e7;
+		border-color: #7bc89b;
 	}
 
 	.message-meta {
@@ -222,24 +222,24 @@
 	}
 
 	.name {
-		color: #907aa9;
+		color: #4a8c64;
 		font-weight: 600;
 		font-size: 1rem;
 	}
 
 	.email {
-		color: #9893a5;
+		color: #7a9484;
 		font-size: 0.85rem;
 	}
 
 	.time {
-		color: #c4a7e7;
+		color: #7bc89b;
 		font-size: 0.8rem;
 		margin-left: auto;
 	}
 
 	.message-body {
-		color: #575279;
+		color: #3d5a47;
 		font-size: 0.9rem;
 		line-height: 1.6;
 		white-space: pre-wrap;

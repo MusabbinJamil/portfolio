@@ -29,40 +29,40 @@
 	}
 	.card {
 		background: #ffffff;
-		border: 1px solid #e8dff5;
+		border: 1px solid #d4edda;
 		border-radius: 16px;
 		padding: 48px 40px;
-		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
+		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
 	}
 	.greeting {
 		font-size: 1.725rem;
-		color: #c4a7e7;
+		color: #7bc89b;
 		margin-bottom: 12px;
 		font-weight: 500;
 	}
 	.name {
 		font-size: 4.125rem;
 		font-weight: 700;
-		color: #907aa9;
+		color: #4a8c64;
 		margin-bottom: 8px;
 		line-height: 1.2;
 	}
 	.title {
 		font-size: 2.125rem;
-		color: #575279;
+		color: #3d5a47;
 		margin-bottom: 16px;
 		font-weight: 600;
 	}
 	.tagline {
 		font-size: 1.875rem;
-		color: #9893a5;
+		color: #7a9484;
 		max-width: 600px;
 		margin-bottom: 32px;
 	}
 	.cta {
 		display: inline-block;
 		padding: 14px 36px;
-		background: #c4a7e7;
+		background: #7bc89b;
 		color: #ffffff;
 		border-radius: 8px;
 		font-weight: 600;
@@ -71,8 +71,8 @@
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.cta:hover {
-		background: #b08fd6;
-		box-shadow: 0 4px 16px rgba(196, 167, 231, 0.35);
+		background: #5db87e;
+		box-shadow: 0 4px 16px rgba(123, 200, 155, 0.35);
 		text-decoration: none;
 	}
 
