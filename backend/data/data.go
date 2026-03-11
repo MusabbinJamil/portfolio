@@ -135,6 +135,7 @@ func NewStore() *Store {
 					"using evolutionary computation and LLMs. Includes ETL workflow, " +
 					"DB connectivity, and other data transformation utilities.",
 				TechStack: []string{"Python", "LLMs", "Evolutionary Computation", "ETL"},
+				GithubURL: "https://github.com/MusabbinJamil/FastMig",
 				LiveURL:   "https://fastmig.musabjamil.me",
 			},
 			{
@@ -143,6 +144,7 @@ func NewStore() *Store {
 				Description: "A pipeline to extract, transform, and load data from a transactional " +
 					"database into a star schema for data analysis and insightful dashboarding.",
 				TechStack: []string{"Python", "Apache Airflow", "SQL", "Star Schema"},
+				GithubURL: "https://github.com/MusabbinJamil/DataWarehousingProject",
 			},
 			{
 				ID:    3,
@@ -150,6 +152,7 @@ func NewStore() *Store {
 				Description: "A prototype that fills in the gaps of Azure Computer Vision OCR " +
 					"using semantic imputation of text via the OpenAI API.",
 				TechStack: []string{"Python", "OpenAI API", "Azure Computer Vision", "OCR"},
+				GithubURL: "https://github.com/MusabbinJamil/DeepLearning",
 			},
 			{
 				ID:    4,
@@ -157,6 +160,7 @@ func NewStore() *Store {
 				Description: "An interface to load data and get feedback based on multiple " +
 					"user-defined personas, with verification on LLM answers using probabilistic reasoning.",
 				TechStack: []string{"Python", "LLMs", "Probabilistic Reasoning"},
+				GithubURL: "https://github.com/MusabbinJamil/Persona-Based-Data-Processing",
 				LiveURL:   "http://needtechlab.maccestech.com/action?name=persona",
 			},
 			{
@@ -164,12 +168,14 @@ func NewStore() *Store {
 				Title:       "Trike AI",
 				Description: "An AI agent that can play the game of Trike using reinforcement learning.",
 				TechStack:   []string{"Python", "Reinforcement Learning", "AI"},
+				GithubURL:   "https://github.com/MusabbinJamil/CI_Trike",
 			},
 			{
 				ID:          6,
 				Title:       "Flask Dashboard",
 				Description: "A Flask-based interactive dashboard for data visualization and analytics.",
 				TechStack:   []string{"Python", "Flask", "HTML/CSS", "JavaScript"},
+				GithubURL:   "https://github.com/MusabbinJamil/Flask-Trading-Project",
 				LiveURL:     "https://musabjamil.pythonanywhere.com",
 			},
 			{
@@ -186,6 +192,7 @@ func NewStore() *Store {
 					"through natural language. Built with Azure OpenAI for intelligent responses " +
 					"and a CSV data handling pipeline for seamless data ingestion and exploration.",
 				TechStack: []string{"Python", "Azure OpenAI", "CSV Pipeline", "AI Chat"},
+				GithubURL: "https://github.com/MusabbinJamil/Persona-Based-Data-Processing",
 				LiveURL:   "http://needtechlab.maccestech.com/action?name=ai_chat",
 			},
 		},

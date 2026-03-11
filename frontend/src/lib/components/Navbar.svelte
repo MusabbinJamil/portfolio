@@ -28,10 +28,17 @@
 
 <nav>
 	<div class="logo">Musab</div>
-	<div class="nav-right">
+	<div class="nav-links-area">
+		<ul class="links" class:open={menuOpen}>
+			<li><a href="#about" onclick={() => handleNavClick('about')}>About</a></li>
+			<li><a href="#experience" onclick={() => handleNavClick('experience')}>Experience</a></li>
+			<li><a href="#projects" onclick={() => handleNavClick('projects')}>Projects</a></li>
+			<li><a href="#education" onclick={() => handleNavClick('education')}>Education</a></li>
+			<li><a href="#contact" onclick={() => handleNavClick('contact')}>Contact</a></li>
+		</ul>
 		<button class="theme-toggle" onclick={toggleTheme} aria-label="Toggle dark mode">
 			{#if dark}
-				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<circle cx="12" cy="12" r="5"/>
 					<line x1="12" y1="1" x2="12" y2="3"/>
 					<line x1="12" y1="21" x2="12" y2="23"/>
@@ -43,7 +50,7 @@
 					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
 				</svg>
 			{:else}
-				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
 				</svg>
 			{/if}
@@ -54,13 +61,6 @@
 			<span class="bar"></span>
 		</button>
 	</div>
-	<ul class="links" class:open={menuOpen}>
-		<li><a href="#about" onclick={() => handleNavClick('about')}>About</a></li>
-		<li><a href="#experience" onclick={() => handleNavClick('experience')}>Experience</a></li>
-		<li><a href="#projects" onclick={() => handleNavClick('projects')}>Projects</a></li>
-		<li><a href="#education" onclick={() => handleNavClick('education')}>Education</a></li>
-		<li><a href="#contact" onclick={() => handleNavClick('contact')}>Contact</a></li>
-	</ul>
 </nav>
 
 <style>
@@ -83,16 +83,16 @@
 		font-weight: 700;
 		color: var(--accent);
 	}
-	.nav-right {
+	.nav-links-area {
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		gap: 20px;
 	}
 	.theme-toggle {
 		background: none;
 		border: 1px solid var(--border);
 		border-radius: 8px;
-		padding: 6px 8px;
+		padding: 8px 10px;
 		cursor: pointer;
 		color: var(--accent-soft);
 		display: flex;
@@ -147,7 +147,7 @@
 			display: none;
 			position: absolute;
 			top: 100%;
-			left: 0;
+			right: 0;
 			width: 100%;
 			background: var(--nav-bg-mobile);
 			border-bottom: 1px solid var(--border);

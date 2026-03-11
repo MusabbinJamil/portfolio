@@ -32,7 +32,7 @@
 				x: Math.random() * canvas.width,
 				y: Math.random() * canvas.height,
 				speed: 0.2 + Math.random() * 0.5,
-				size: 10 + Math.random() * 8,
+				size: 32 + Math.random() * 40,
 				color: colors[Math.floor(Math.random() * colors.length)],
 				symbol: symbols[Math.floor(Math.random() * symbols.length)],
 				opacity: 0.15 + Math.random() * 0.25
