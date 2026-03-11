@@ -102,18 +102,18 @@
 	}
 
 	.login-box {
-		border: 1px solid #d4edda;
+		border: 1px solid var(--border);
 		border-radius: 12px;
 		padding: 48px;
 		text-align: center;
 		max-width: 400px;
 		width: 100%;
-		background: #ffffff;
-		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
+		background: var(--bg-card);
+		box-shadow: 0 4px 24px var(--shadow);
 	}
 
 	.login-box h1 {
-		color: #4a8c64;
+		color: var(--accent);
 		font-size: 1.8rem;
 		margin-bottom: 32px;
 	}
@@ -121,10 +121,10 @@
 	input {
 		width: 100%;
 		padding: 12px 16px;
-		background: #f0faf4;
-		border: 1px solid #d4edda;
+		background: var(--bg-input);
+		border: 1px solid var(--border);
 		border-radius: 8px;
-		color: #3d5a47;
+		color: var(--text-primary);
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		outline: none;
@@ -132,20 +132,20 @@
 	}
 
 	input:focus {
-		border-color: #7bc89b;
+		border-color: var(--accent-soft);
 	}
 
 	input::placeholder {
-		color: #7a9484;
+		color: var(--text-muted);
 	}
 
 	button {
 		width: 100%;
 		padding: 12px;
 		background: transparent;
-		border: 1px solid #7bc89b;
+		border: 1px solid var(--accent-soft);
 		border-radius: 8px;
-		color: #4a8c64;
+		color: var(--accent);
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		cursor: pointer;
@@ -161,7 +161,7 @@
 	}
 
 	.error {
-		color: #eb6f92;
+		color: var(--error);
 		margin-top: 16px;
 		font-size: 0.9rem;
 	}
@@ -180,17 +180,17 @@
 	}
 
 	.header h1 {
-		color: #4a8c64;
+		color: var(--accent);
 		font-size: 1.8rem;
 	}
 
 	.total {
-		color: #7a9484;
+		color: var(--text-muted);
 		font-size: 1rem;
 	}
 
 	.empty {
-		color: #7a9484;
+		color: var(--text-muted);
 		text-align: center;
 		padding: 40px;
 	}
@@ -202,15 +202,15 @@
 	}
 
 	.message-card {
-		border: 1px solid #d4edda;
+		border: 1px solid var(--border);
 		border-radius: 8px;
 		padding: 20px;
-		background: #ffffff;
-		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
+		background: var(--bg-card);
+		box-shadow: 0 4px 24px var(--shadow);
 	}
 
 	.message-card:hover {
-		border-color: #7bc89b;
+		border-color: var(--accent-soft);
 	}
 
 	.message-meta {
@@ -222,24 +222,24 @@
 	}
 
 	.name {
-		color: #4a8c64;
+		color: var(--accent);
 		font-weight: 600;
 		font-size: 1rem;
 	}
 
 	.email {
-		color: #7a9484;
+		color: var(--text-muted);
 		font-size: 0.85rem;
 	}
 
 	.time {
-		color: #7bc89b;
+		color: var(--accent-soft);
 		font-size: 0.8rem;
 		margin-left: auto;
 	}
 
 	.message-body {
-		color: #3d5a47;
+		color: var(--text-primary);
 		font-size: 0.9rem;
 		line-height: 1.6;
 		white-space: pre-wrap;

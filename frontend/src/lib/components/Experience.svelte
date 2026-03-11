@@ -27,15 +27,15 @@
 		gap: 24px;
 	}
 	.job {
-		background: #ffffff;
+		background: var(--bg-card);
 		border-radius: 12px;
 		padding: 28px;
-		border: 1px solid #d4edda;
-		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
-		transition: border-color 0.2s;
+		border: 1px solid var(--border);
+		box-shadow: 0 4px 24px var(--shadow);
+		transition: border-color 0.2s, background 0.3s;
 	}
 	.job:hover {
-		border-color: #7bc89b;
+		border-color: var(--accent-soft);
 	}
 	.header {
 		display: flex;
@@ -46,22 +46,22 @@
 		gap: 8px;
 	}
 	h3 {
-		color: #4a8c64;
+		color: var(--accent);
 		font-size: 1.925rem;
 	}
 	.period {
-		color: #7bc89b;
+		color: var(--accent-soft);
 		font-size: 1.525rem;
 		font-weight: 500;
 	}
 	.company {
-		color: #3d5a47;
+		color: var(--text-primary);
 		font-size: 1.675rem;
 		font-weight: 500;
 		margin-bottom: 12px;
 	}
 	.description {
-		color: #5a7a64;
+		color: var(--text-secondary);
 		line-height: 1.7;
 		font-size: 1.575rem;
 	}

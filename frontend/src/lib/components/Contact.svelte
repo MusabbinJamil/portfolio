@@ -65,11 +65,12 @@
 
 <style>
 	.card {
-		background: #ffffff;
-		border: 1px solid #d4edda;
+		background: var(--bg-card);
+		border: 1px solid var(--border);
 		border-radius: 16px;
 		padding: 40px;
-		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
+		box-shadow: 0 4px 24px var(--shadow);
+		transition: background 0.3s, border-color 0.3s;
 	}
 	.layout {
 		display: grid;
@@ -78,7 +79,7 @@
 		align-items: start;
 	}
 	.info p {
-		color: #5a7a64;
+		color: var(--text-secondary);
 		margin-bottom: 16px;
 		font-size: 1.625rem;
 	}
@@ -99,26 +100,27 @@
 	}
 	input,
 	textarea {
-		background: #f0faf4;
-		border: 1px solid #d4edda;
+		background: var(--bg-input);
+		border: 1px solid var(--border);
 		border-radius: 8px;
 		padding: 14px 16px;
-		color: #3d5a47;
+		color: var(--text-primary);
 		font-family: inherit;
 		font-size: 1.625rem;
+		transition: background 0.3s, border-color 0.3s, color 0.3s;
 	}
 	input:focus,
 	textarea:focus {
 		outline: none;
-		border-color: #7bc89b;
-		box-shadow: 0 0 8px rgba(123, 200, 155, 0.3);
+		border-color: var(--accent-soft);
+		box-shadow: 0 0 8px var(--shadow-hover);
 	}
 	input::placeholder,
 	textarea::placeholder {
-		color: #7a9484;
+		color: var(--text-muted);
 	}
 	button {
-		background: #7bc89b;
+		background: var(--accent-soft);
 		color: #ffffff;
 		border: none;
 		border-radius: 8px;
@@ -129,20 +131,20 @@
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	button:hover:not(:disabled) {
-		background: #5db87e;
-		box-shadow: 0 4px 16px rgba(123, 200, 155, 0.35);
+		background: var(--accent-hover);
+		box-shadow: 0 4px 16px var(--shadow-hover);
 	}
 	button:disabled {
 		opacity: 0.6;
 		cursor: not-allowed;
 	}
 	.success {
-		color: #4a8c64;
+		color: var(--success);
 		font-weight: 500;
 		font-size: 1.575rem;
 	}
 	.error-msg {
-		color: #eb6f92;
+		color: var(--error);
 		font-weight: 500;
 		font-size: 1.575rem;
 	}

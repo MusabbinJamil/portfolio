@@ -38,23 +38,23 @@
 		gap: 24px;
 	}
 	.card {
-		background: #ffffff;
+		background: var(--bg-card);
 		border-radius: 12px;
 		padding: 28px;
-		border: 1px solid #d4edda;
-		box-shadow: 0 4px 24px rgba(123, 200, 155, 0.12);
-		transition: border-color 0.2s;
+		border: 1px solid var(--border);
+		box-shadow: 0 4px 24px var(--shadow);
+		transition: border-color 0.2s, background 0.3s;
 	}
 	.card:hover {
-		border-color: #7bc89b;
+		border-color: var(--accent-soft);
 	}
 	h3 {
-		color: #4a8c64;
+		color: var(--accent);
 		font-size: 1.925rem;
 		margin-bottom: 12px;
 	}
 	.description {
-		color: #5a7a64;
+		color: var(--text-secondary);
 		margin-bottom: 16px;
 		line-height: 1.6;
 		font-size: 1.575rem;
@@ -68,13 +68,14 @@
 		margin-bottom: 16px;
 	}
 	.tech li {
-		background: #e8f5ed;
-		color: #4a8c64;
+		background: var(--bg-badge);
+		color: var(--accent);
 		padding: 4px 12px;
 		border-radius: 4px;
 		font-size: 1.475rem;
 		font-weight: 500;
-		border: 1px solid #d4edda;
+		border: 1px solid var(--border);
+		transition: background 0.3s, border-color 0.3s;
 	}
 	.links {
 		display: flex;
@@ -82,12 +83,12 @@
 		gap: 16px;
 	}
 	.links a {
-		color: #4a8c64;
+		color: var(--accent);
 		font-weight: 500;
 		font-size: 1.575rem;
 	}
 	.explore-btn {
-		background: #7bc89b;
+		background: var(--accent-soft);
 		color: #ffffff !important;
 		padding: 12px 36px;
 		border-radius: 8px;
@@ -97,8 +98,8 @@
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.explore-btn:hover {
-		background: #5db87e;
-		box-shadow: 0 4px 16px rgba(123, 200, 155, 0.35);
+		background: var(--accent-hover);
+		box-shadow: 0 4px 16px var(--shadow-hover);
 	}
 
 	@media (max-width: 768px) {
