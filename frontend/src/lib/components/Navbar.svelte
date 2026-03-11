@@ -30,9 +30,9 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		background: rgba(0, 0, 0, 0.95);
-		backdrop-filter: blur(8px);
-		border-bottom: 1px solid #003300;
+		background: rgba(250, 245, 255, 0.92);
+		backdrop-filter: blur(12px);
+		border-bottom: 1px solid #e8dff5;
 		z-index: 1000;
 		padding: 16px 24px;
 		display: flex;
@@ -42,7 +42,7 @@
 	.logo {
 		font-size: 2.025rem;
 		font-weight: 700;
-		color: #00ff41;
+		color: #907aa9;
 	}
 	.hamburger {
 		display: none;
@@ -57,7 +57,7 @@
 		display: block;
 		width: 28px;
 		height: 3px;
-		background: #00ff41;
+		background: #c4a7e7;
 		border-radius: 2px;
 	}
 	.links {
@@ -66,14 +66,14 @@
 		list-style: none;
 	}
 	.links a {
-		color: #008f11;
+		color: #9893a5;
 		text-decoration: none;
 		font-weight: 500;
 		font-size: 1.575rem;
 		transition: color 0.2s;
 	}
 	.links a:hover {
-		color: #00ff41;
+		color: #907aa9;
 	}
 
 	@media (max-width: 768px) {
@@ -89,8 +89,8 @@
 			top: 100%;
 			left: 0;
 			width: 100%;
-			background: rgba(0, 0, 0, 0.95);
-			border-bottom: 1px solid #003300;
+			background: rgba(250, 245, 255, 0.95);
+			border-bottom: 1px solid #e8dff5;
 			flex-direction: column;
 			gap: 0;
 			padding: 8px 0;

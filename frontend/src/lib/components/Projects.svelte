@@ -38,22 +38,23 @@
 		gap: 24px;
 	}
 	.card {
-		background: #0a0a0a;
+		background: #ffffff;
 		border-radius: 12px;
 		padding: 28px;
-		border: 1px solid #003300;
+		border: 1px solid #e8dff5;
+		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
 		transition: border-color 0.2s;
 	}
 	.card:hover {
-		border-color: #00ff41;
+		border-color: #c4a7e7;
 	}
 	h3 {
-		color: #00ff41;
+		color: #907aa9;
 		font-size: 1.925rem;
 		margin-bottom: 12px;
 	}
 	.description {
-		color: #008f11;
+		color: #6e6a86;
 		margin-bottom: 16px;
 		line-height: 1.6;
 		font-size: 1.575rem;
@@ -67,13 +68,13 @@
 		margin-bottom: 16px;
 	}
 	.tech li {
-		background: #000000;
-		color: #00ff41;
+		background: #f0e8fa;
+		color: #907aa9;
 		padding: 4px 12px;
 		border-radius: 4px;
 		font-size: 1.475rem;
 		font-weight: 500;
-		border: 1px solid #003300;
+		border: 1px solid #e8dff5;
 	}
 	.links {
 		display: flex;
@@ -81,13 +82,13 @@
 		gap: 16px;
 	}
 	.links a {
-		color: #00ff41;
+		color: #907aa9;
 		font-weight: 500;
 		font-size: 1.575rem;
 	}
 	.explore-btn {
-		background: #00ff41;
-		color: #000000 !important;
+		background: #c4a7e7;
+		color: #ffffff !important;
 		padding: 12px 36px;
 		border-radius: 8px;
 		text-decoration: none;
@@ -96,8 +97,8 @@
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.explore-btn:hover {
-		background: #33ff66;
-		box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+		background: #b08fd6;
+		box-shadow: 0 4px 16px rgba(196, 167, 231, 0.35);
 	}
 
 	@media (max-width: 768px) {

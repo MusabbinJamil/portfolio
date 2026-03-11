@@ -9,28 +9,39 @@
 		function resize() {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
-			initColumns();
+			initParticles();
 		}
 
-		const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';
-		const fontSize = 14;
+		const symbols = ['~', '*', '.', '+', 'o', ':', '^'];
+		const colors = ['#c4a7e7', '#ebbcba', '#f6c177', '#9ccfd8', '#c4a7e7'];
 
-		let columns = 0;
-		let drops: number[] = [];
-		let speeds: number[] = [];
-
-		// speeds in rows/ms: fastest ~3s to cross, slowest ~10s
-		function randomSpeed() {
-			return 0.008 + Math.random() * 0.018;
+		interface Particle {
+			x: number;
+			y: number;
+			speed: number;
+			size: number;
+			color: string;
+			symbol: string;
+			opacity: number;
 		}
 
-		function initColumns() {
-			const newCols = Math.floor(canvas.width / fontSize);
-			if (newCols !== columns) {
-				columns = newCols;
-				drops = Array(columns).fill(0).map(() => Math.random() * -50);
-				speeds = Array(columns).fill(0).map(randomSpeed);
-			}
+		let particles: Particle[] = [];
+
+		function createParticle(): Particle {
+			return {
+				x: Math.random() * canvas.width,
+				y: Math.random() * canvas.height,
+				speed: 0.2 + Math.random() * 0.5,
+				size: 10 + Math.random() * 8,
+				color: colors[Math.floor(Math.random() * colors.length)],
+				symbol: symbols[Math.floor(Math.random() * symbols.length)],
+				opacity: 0.15 + Math.random() * 0.25
+			};
+		}
+
+		function initParticles() {
+			const count = Math.floor((canvas.width * canvas.height) / 18000);
+			particles = Array.from({ length: count }, createParticle);
 		}
 
 		resize();
@@ -42,27 +53,21 @@
 			const delta = lastTime ? time - lastTime : 16;
 			lastTime = time;
 
-			ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
-			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-			ctx.fillStyle = '#00ff41';
-			ctx.font = `${fontSize}px monospace`;
+			for (const p of particles) {
+				ctx.globalAlpha = p.opacity;
+				ctx.fillStyle = p.color;
+				ctx.font = `${p.size}px monospace`;
+				ctx.fillText(p.symbol, p.x, p.y);
 
-			for (let i = 0; i < drops.length; i++) {
-				const char = chars[Math.floor(Math.random() * chars.length)];
-				const x = i * fontSize;
-				const y = drops[i] * fontSize;
-
-				ctx.globalAlpha = 0.3 + Math.random() * 0.4;
-				ctx.fillText(char, x, y);
-				ctx.globalAlpha = 1;
-
-				if (y > canvas.height && Math.random() > 0.98) {
-					drops[i] = 0;
-					speeds[i] = randomSpeed();
+				p.y -= p.speed * delta * 0.03;
+				if (p.y < -20) {
+					p.y = canvas.height + 20;
+					p.x = Math.random() * canvas.width;
 				}
-				drops[i] += speeds[i] * delta;
 			}
+			ctx.globalAlpha = 1;
 
 			requestAnimationFrame(draw);
 		}

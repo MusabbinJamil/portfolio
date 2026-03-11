@@ -50,7 +50,7 @@
 {#if !authenticated}
 	<div class="login-container">
 		<div class="login-box">
-			<h1>&gt; messages_</h1>
+			<h1>messages</h1>
 			<form onsubmit={login}>
 				<input
 					type="password"
@@ -70,7 +70,7 @@
 {:else}
 	<div class="dashboard">
 		<div class="header">
-			<h1>&gt; messages_</h1>
+			<h1>messages</h1>
 			<span class="total">{total} messages</span>
 		</div>
 
@@ -102,16 +102,18 @@
 	}
 
 	.login-box {
-		border: 1px solid #003300;
+		border: 1px solid #e8dff5;
 		border-radius: 12px;
 		padding: 48px;
 		text-align: center;
 		max-width: 400px;
 		width: 100%;
+		background: #ffffff;
+		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
 	}
 
 	.login-box h1 {
-		color: #00ff41;
+		color: #907aa9;
 		font-size: 1.8rem;
 		margin-bottom: 32px;
 	}
@@ -119,10 +121,10 @@
 	input {
 		width: 100%;
 		padding: 12px 16px;
-		background: #0a0a0a;
-		border: 1px solid #003300;
+		background: #faf5ff;
+		border: 1px solid #e8dff5;
 		border-radius: 8px;
-		color: #00ff41;
+		color: #575279;
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		outline: none;
@@ -130,27 +132,27 @@
 	}
 
 	input:focus {
-		border-color: #00ff41;
+		border-color: #c4a7e7;
 	}
 
 	input::placeholder {
-		color: #008f11;
+		color: #9893a5;
 	}
 
 	button {
 		width: 100%;
 		padding: 12px;
 		background: transparent;
-		border: 1px solid #00ff41;
+		border: 1px solid #c4a7e7;
 		border-radius: 8px;
-		color: #00ff41;
+		color: #907aa9;
 		font-family: 'Inter', monospace;
 		font-size: 1rem;
 		cursor: pointer;
 	}
 
 	button:hover {
-		background: #00ff4115;
+		background: rgba(196, 167, 231, 0.1);
 	}
 
 	button:disabled {
@@ -159,7 +161,7 @@
 	}
 
 	.error {
-		color: #ff4141;
+		color: #eb6f92;
 		margin-top: 16px;
 		font-size: 0.9rem;
 	}
@@ -178,17 +180,17 @@
 	}
 
 	.header h1 {
-		color: #00ff41;
+		color: #907aa9;
 		font-size: 1.8rem;
 	}
 
 	.total {
-		color: #008f11;
+		color: #9893a5;
 		font-size: 1rem;
 	}
 
 	.empty {
-		color: #008f11;
+		color: #9893a5;
 		text-align: center;
 		padding: 40px;
 	}
@@ -200,13 +202,15 @@
 	}
 
 	.message-card {
-		border: 1px solid #003300;
+		border: 1px solid #e8dff5;
 		border-radius: 8px;
 		padding: 20px;
+		background: #ffffff;
+		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
 	}
 
 	.message-card:hover {
-		border-color: #008f11;
+		border-color: #c4a7e7;
 	}
 
 	.message-meta {
@@ -218,24 +222,24 @@
 	}
 
 	.name {
-		color: #00ff41;
+		color: #907aa9;
 		font-weight: 600;
 		font-size: 1rem;
 	}
 
 	.email {
-		color: #008f11;
+		color: #9893a5;
 		font-size: 0.85rem;
 	}
 
 	.time {
-		color: #003300;
+		color: #c4a7e7;
 		font-size: 0.8rem;
 		margin-left: auto;
 	}
 
 	.message-body {
-		color: #00cc33;
+		color: #575279;
 		font-size: 0.9rem;
 		line-height: 1.6;
 		white-space: pre-wrap;

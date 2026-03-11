@@ -28,42 +28,42 @@
 		margin: 0 auto;
 	}
 	.card {
-		background: #0a0a0a;
-		border: 1px solid #003300;
+		background: #ffffff;
+		border: 1px solid #e8dff5;
 		border-radius: 16px;
 		padding: 48px 40px;
+		box-shadow: 0 4px 24px rgba(196, 167, 231, 0.12);
 	}
 	.greeting {
 		font-size: 1.725rem;
-		color: #00ff41;
+		color: #c4a7e7;
 		margin-bottom: 12px;
 		font-weight: 500;
 	}
 	.name {
 		font-size: 4.125rem;
 		font-weight: 700;
-		color: #00ff41;
+		color: #907aa9;
 		margin-bottom: 8px;
 		line-height: 1.2;
-		text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 	}
 	.title {
 		font-size: 2.125rem;
-		color: #00cc33;
+		color: #575279;
 		margin-bottom: 16px;
 		font-weight: 600;
 	}
 	.tagline {
 		font-size: 1.875rem;
-		color: #008f11;
+		color: #9893a5;
 		max-width: 600px;
 		margin-bottom: 32px;
 	}
 	.cta {
 		display: inline-block;
 		padding: 14px 36px;
-		background: #00ff41;
-		color: #000000;
+		background: #c4a7e7;
+		color: #ffffff;
 		border-radius: 8px;
 		font-weight: 600;
 		font-size: 1.625rem;
@@ -71,8 +71,8 @@
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.cta:hover {
-		background: #33ff66;
-		box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+		background: #b08fd6;
+		box-shadow: 0 4px 16px rgba(196, 167, 231, 0.35);
 		text-decoration: none;
 	}
 

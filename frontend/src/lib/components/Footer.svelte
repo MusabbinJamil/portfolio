@@ -6,8 +6,8 @@
 	footer {
 		text-align: center;
 		padding: 40px 20px;
-		color: #003300;
-		border-top: 1px solid #003300;
+		color: #9893a5;
+		border-top: 1px solid #e8dff5;
 		font-size: 1.525rem;
 	}
 
