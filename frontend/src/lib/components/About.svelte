@@ -7,22 +7,7 @@
 <section id="about">
 	<h2>About Me</h2>
 	<div class="card">
-		<div class="content">
-			<div>
-				<p class="bio">{about.bio}</p>
-			</div>
-			<div>
-				<p class="skills-title">Technologies I work with:</p>
-				<ul class="skills-list">
-					{#each about.skills as skill}
-						<li class="skill">
-							<span class="bullet">&#9654;</span>
-							{skill}
-						</li>
-					{/each}
-				</ul>
-			</div>
-		</div>
+		<p class="bio">{about.bio}</p>
 	</div>
 </section>
 
@@ -35,59 +20,15 @@
 		box-shadow: 0 4px 24px var(--shadow);
 		transition: background 0.3s, border-color 0.3s;
 	}
-	.content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 40px;
-		align-items: start;
-	}
 	.bio {
 		color: var(--text-secondary);
-		font-size: 1.675rem;
+		font-size: clamp(1.05rem, 1.5vw, 1.675rem);
 		line-height: 1.8;
-	}
-	.skills-title {
-		color: var(--accent);
-		font-size: 1.725rem;
-		font-weight: 600;
-		margin-bottom: 16px;
-	}
-	.skills-list {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 8px;
-		list-style: none;
-		padding: 0;
-	}
-	.skill {
-		color: var(--text-secondary);
-		font-size: 1.05rem;
-		padding: 6px 0;
-	}
-	.bullet {
-		color: var(--accent-soft);
-		margin-right: 8px;
 	}
 
 	@media (max-width: 768px) {
 		.card {
 			padding: 24px 20px;
-		}
-		.content {
-			grid-template-columns: 1fr;
-			gap: 24px;
-		}
-		.bio {
-			font-size: 1.05rem;
-		}
-		.skills-title {
-			font-size: 1.1rem;
-		}
-		.skills-list {
-			grid-template-columns: 1fr 1fr;
-		}
-		.skill {
-			font-size: 0.95rem;
 		}
 	}
 </style>

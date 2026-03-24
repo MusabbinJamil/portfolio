@@ -15,6 +15,13 @@
 				</div>
 				<p class="company">{job.company}</p>
 				<p class="description">{job.description}</p>
+				{#if job.techStack && job.techStack.length > 0}
+					<ul class="tech">
+						{#each job.techStack as tech}
+							<li>{tech}</li>
+						{/each}
+					</ul>
+				{/if}
 			</article>
 		{/each}
 	</div>
@@ -47,40 +54,46 @@
 	}
 	h3 {
 		color: var(--accent);
-		font-size: 1.925rem;
+		font-size: clamp(1.3rem, 2vw, 1.925rem);
 	}
 	.period {
 		color: var(--accent-soft);
-		font-size: 1.525rem;
+		font-size: clamp(0.9rem, 1.3vw, 1.525rem);
 		font-weight: 500;
 	}
 	.company {
 		color: var(--text-primary);
-		font-size: 1.675rem;
+		font-size: clamp(1.05rem, 1.5vw, 1.675rem);
 		font-weight: 500;
 		margin-bottom: 12px;
 	}
 	.description {
 		color: var(--text-secondary);
 		line-height: 1.7;
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
+		margin-bottom: 12px;
+	}
+	.tech {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		list-style: none;
+		padding: 0;
+	}
+	.tech li {
+		background: var(--bg-badge);
+		color: var(--accent);
+		padding: 4px 12px;
+		border-radius: 4px;
+		font-size: clamp(0.85rem, 1.2vw, 1.475rem);
+		font-weight: 500;
+		border: 1px solid var(--border);
+		transition: background 0.3s, border-color 0.3s;
 	}
 
 	@media (max-width: 768px) {
 		.job {
 			padding: 20px;
-		}
-		h3 {
-			font-size: 1.3rem;
-		}
-		.period {
-			font-size: 0.9rem;
-		}
-		.company {
-			font-size: 1.05rem;
-		}
-		.description {
-			font-size: 0.95rem;
 		}
 	}
 </style>

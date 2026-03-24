@@ -44,14 +44,14 @@
 	}
 	h3 {
 		color: var(--accent);
-		font-size: 1.925rem;
+		font-size: clamp(1.3rem, 2vw, 1.925rem);
 		margin-bottom: 12px;
 	}
 	.description {
 		color: var(--text-secondary);
 		margin-bottom: 16px;
 		line-height: 1.6;
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
 	}
 	.tech {
 		display: flex;
@@ -66,7 +66,7 @@
 		color: var(--accent);
 		padding: 4px 12px;
 		border-radius: 4px;
-		font-size: 1.475rem;
+		font-size: clamp(0.85rem, 1.2vw, 1.475rem);
 		font-weight: 500;
 		border: 1px solid var(--border);
 		transition: background 0.3s, border-color 0.3s;
@@ -79,7 +79,7 @@
 	.links a {
 		color: var(--accent);
 		font-weight: 500;
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
 	}
 	.explore-btn {
 		background: var(--accent-soft);
@@ -88,7 +88,7 @@
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 600;
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
 		transition: background 0.2s, box-shadow 0.2s;
 	}
 	.explore-btn:hover {
@@ -99,22 +99,6 @@
 	@media (max-width: 768px) {
 		.card {
 			padding: 20px;
-		}
-		h3 {
-			font-size: 1.3rem;
-		}
-		.description {
-			font-size: 0.95rem;
-		}
-		.tech li {
-			font-size: 0.85rem;
-		}
-		.links a {
-			font-size: 0.95rem;
-		}
-		.explore-btn {
-			font-size: 0.95rem;
-			padding: 10px 28px;
 		}
 	}
 </style>

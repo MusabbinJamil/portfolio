@@ -81,7 +81,7 @@
 	.info p {
 		color: var(--text-secondary);
 		margin-bottom: 16px;
-		font-size: 1.625rem;
+		font-size: clamp(1rem, 1.5vw, 1.625rem);
 	}
 	.info ul {
 		list-style: none;
@@ -91,7 +91,7 @@
 		gap: 10px;
 	}
 	.info ul a {
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
 	}
 	form {
 		display: flex;
@@ -106,7 +106,7 @@
 		padding: 14px 16px;
 		color: var(--text-primary);
 		font-family: inherit;
-		font-size: 1.625rem;
+		font-size: clamp(1rem, 1.5vw, 1.625rem);
 		transition: background 0.3s, border-color 0.3s, color 0.3s;
 	}
 	input:focus,
@@ -126,7 +126,7 @@
 		border-radius: 8px;
 		padding: 14px 24px;
 		font-weight: 600;
-		font-size: 1.625rem;
+		font-size: clamp(1rem, 1.5vw, 1.625rem);
 		cursor: pointer;
 		transition: background 0.2s, box-shadow 0.2s;
 	}
@@ -141,12 +141,12 @@
 	.success {
 		color: var(--success);
 		font-weight: 500;
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
 	}
 	.error-msg {
 		color: var(--error);
 		font-weight: 500;
-		font-size: 1.575rem;
+		font-size: clamp(0.95rem, 1.4vw, 1.575rem);
 	}
 
 	@media (max-width: 768px) {
@@ -156,23 +156,6 @@
 		.layout {
 			grid-template-columns: 1fr;
 			gap: 24px;
-		}
-		.info p {
-			font-size: 1rem;
-		}
-		.info ul a {
-			font-size: 1rem;
-		}
-		input,
-		textarea {
-			font-size: 1rem;
-		}
-		button {
-			font-size: 1rem;
-		}
-		.success,
-		.error-msg {
-			font-size: 0.95rem;
 		}
 	}
 </style>

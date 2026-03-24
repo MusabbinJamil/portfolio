@@ -7,6 +7,7 @@
 
 <section class="hero">
 	<div class="card">
+		<img src="/2026.jpg" alt="Musab Bin Jamil" class="photo" />
 		<p class="greeting">Hi, my name is</p>
 		<h1 class="name">{hero.name}</h1>
 		<p class="title">{hero.title}</p>
@@ -23,9 +24,8 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		padding: 120px 20px 80px;
-		max-width: 900px;
-		margin: 0 auto;
+		padding: 120px 5vw 80px;
+		max-width: 100%;
 	}
 	.card {
 		background: var(--bg-card);
@@ -34,31 +34,40 @@
 		padding: 48px 40px;
 		box-shadow: 0 4px 24px var(--shadow);
 		transition: background 0.3s, border-color 0.3s;
+		width: 100%;
+	}
+	.photo {
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 3px solid var(--accent-soft);
+		margin-bottom: 24px;
 	}
 	.greeting {
-		font-size: 1.725rem;
+		font-size: clamp(1rem, 1.5vw, 1.725rem);
 		color: var(--accent-soft);
 		margin-bottom: 12px;
 		font-weight: 500;
 	}
 	.name {
-		font-size: 4.125rem;
+		font-size: clamp(2.25rem, 5vw, 4.125rem);
 		font-weight: 700;
 		color: var(--accent);
 		margin-bottom: 8px;
 		line-height: 1.2;
 	}
 	.title {
-		font-size: 2.125rem;
+		font-size: clamp(1.35rem, 2.5vw, 2.125rem);
 		color: var(--text-primary);
 		margin-bottom: 16px;
 		font-weight: 600;
 	}
 	.tagline {
-		font-size: 1.875rem;
+		font-size: clamp(1.1rem, 2vw, 1.875rem);
 		color: var(--text-muted);
 		max-width: 600px;
-		margin-bottom: 32px;
+		margin: 0 auto 32px;
 	}
 	.cta {
 		display: inline-block;
@@ -67,7 +76,7 @@
 		color: #ffffff;
 		border-radius: 8px;
 		font-weight: 600;
-		font-size: 1.625rem;
+		font-size: clamp(1rem, 1.5vw, 1.625rem);
 		text-decoration: none;
 		transition: background 0.2s, box-shadow 0.2s;
 	}
@@ -84,21 +93,9 @@
 		.card {
 			padding: 28px 20px;
 		}
-		.greeting {
-			font-size: 1rem;
-		}
-		.name {
-			font-size: 2.25rem;
-		}
-		.title {
-			font-size: 1.35rem;
-		}
-		.tagline {
-			font-size: 1.1rem;
-		}
-		.cta {
-			font-size: 1rem;
-			padding: 12px 28px;
+		.photo {
+			width: 130px;
+			height: 130px;
 		}
 	}
 </style>

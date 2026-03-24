@@ -49,40 +49,28 @@
 	}
 	h3 {
 		color: var(--accent);
-		font-size: 1.825rem;
+		font-size: clamp(1.2rem, 2vw, 1.825rem);
 	}
 	.year {
 		color: var(--accent-soft);
-		font-size: 1.525rem;
+		font-size: clamp(0.9rem, 1.3vw, 1.525rem);
 		font-weight: 500;
 	}
 	.institution {
 		color: var(--text-primary);
-		font-size: 1.675rem;
+		font-size: clamp(1.05rem, 1.5vw, 1.675rem);
 		font-weight: 500;
 		margin-bottom: 8px;
 	}
 	.details {
 		color: var(--text-secondary);
 		line-height: 1.7;
-		font-size: 1.525rem;
+		font-size: clamp(0.9rem, 1.3vw, 1.525rem);
 	}
 
 	@media (max-width: 768px) {
 		.edu-card {
 			padding: 20px;
-		}
-		h3 {
-			font-size: 1.2rem;
-		}
-		.year {
-			font-size: 0.9rem;
-		}
-		.institution {
-			font-size: 1.05rem;
-		}
-		.details {
-			font-size: 0.9rem;
 		}
 	}
 </style>

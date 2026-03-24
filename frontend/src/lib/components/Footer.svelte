@@ -8,13 +8,12 @@
 		padding: 40px 20px;
 		color: var(--text-muted);
 		border-top: 1px solid var(--border);
-		font-size: 1.525rem;
+		font-size: clamp(0.9rem, 1.3vw, 1.525rem);
 		transition: color 0.3s, border-color 0.3s;
 	}
 
 	@media (max-width: 768px) {
 		footer {
-			font-size: 0.9rem;
 			padding: 24px 16px;
 		}
 	}

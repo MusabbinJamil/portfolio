@@ -23,11 +23,12 @@ type Project struct {
 }
 
 type Experience struct {
-	ID          int    `json:"id"`
-	Role        string `json:"role"`
-	Company     string `json:"company"`
-	Period      string `json:"period"`
-	Description string `json:"description"`
+	ID          int      `json:"id"`
+	Role        string   `json:"role"`
+	Company     string   `json:"company"`
+	Period      string   `json:"period"`
+	Description string   `json:"description"`
+	TechStack   []string `json:"techStack"`
 }
 
 type Education struct {
@@ -110,22 +111,16 @@ func NewStore() *Store {
 	return &Store{
 		Hero: HeroData{
 			Name:    "Musab Bin Jamil",
-			Title:   "Full Stack Developer & Data Engineer",
-			Tagline: "Building robust web applications, data pipelines, and AI-driven solutions.",
+			Title:   "Full Stack Developer",
+			Tagline: "Building business solutions with Netforce, Tornado, and modern web technologies.",
 		},
 		About: AboutData{
-			Bio: "Full stack developer with hands-on experience in web development, " +
-				"data engineering, and analysis. MS Data Sciences graduate from IBA Karachi, " +
-				"currently working as a Junior Full Stack Developer at SmartB Solutions. " +
-				"I've built everything from Django backends and ecommerce integrations " +
-				"to ETL pipelines and LLM-powered tools. Fast learner, tech savvy, and always eager to improve.",
-			Skills: []string{
-				"Python", "JavaScript", "C++", "SQL", "HTML/CSS", "Go",
-				"Django", "Flask", "React.js", "Node.js", "Svelte",
-				"PostgreSQL", "MongoDB", "Docker", "Git", "Linux", "REST APIs",
-				"Selenium", "Airflow", "Scikit-learn", "Power BI", "Streamlit",
-				"WordPress",
-			},
+			Bio: "Full stack developer currently building accounts and ecommerce workflows " +
+				"on the Netforce/Tornado/XML stack at SmartB Solutions — my longest and most in-depth role. " +
+				"Previously delivered Django backends, automation pipelines, and LLM-powered tools " +
+				"across multiple companies. MS Data Sciences graduate from IBA Karachi. " +
+				"Fast learner, tech savvy, and always eager to improve.",
+			Skills: []string{},
 		},
 		Projects: []Project{
 			{
@@ -206,6 +201,7 @@ func NewStore() *Store {
 					"Ecommerce integration for Shopee, Lazada, TikTok Shop, Shopify, DHL, SPX Express and NinjaVan. " +
 					"Integration of OpenAI for chat-driven sales order generation. " +
 					"Bayesian decision support system development. Server-side support and client configuration on custom domains.",
+				TechStack: []string{"Netforce", "Tornado", "XML", "Python", "React", "OpenAI API", "Bayesian Methods"},
 			},
 			{
 				ID:      2,
@@ -214,6 +210,7 @@ func NewStore() *Store {
 				Period:  "2024",
 				Description: "Sole developer on a Django-based backend project. Built APIs for a Rasa chatbot, " +
 					"implemented Celery-based automation, and developed JWT-based user authentication.",
+				TechStack: []string{"Django", "Python", "Rasa", "Celery", "JWT"},
 			},
 			{
 				ID:      3,
@@ -222,6 +219,7 @@ func NewStore() *Store {
 				Period:  "2023 – 2024",
 				Description: "Delivered diverse solutions including image processing, HRM systems, " +
 					"database design, automation, and web scraping. Contributed to innovation and standardization across projects.",
+				TechStack: []string{"Python", "PostgreSQL", "Image Processing", "Web Scraping"},
 			},
 			{
 				ID:      4,
@@ -231,6 +229,7 @@ func NewStore() *Store {
 				Description: "Cleaned and consolidated datasets using Python, Excel, and Oracle SQL. " +
 					"Applied machine learning (Ridge Regression) to handle missing data. " +
 					"Managed data storage and reporting via Google Drive and Sheets.",
+				TechStack: []string{"Python", "Oracle SQL", "Excel", "Machine Learning"},
 			},
 			{
 				ID:      5,
@@ -239,6 +238,7 @@ func NewStore() *Store {
 				Period:  "2023",
 				Description: "Developed algorithms on cryptocurrency data. Created interactive dashboards " +
 					"using Streamlit and automated scraping bots with Selenium. Utilized Git for version control.",
+				TechStack: []string{"Python", "Streamlit", "Selenium", "Git"},
 			},
 		},
 		Education: []Education{

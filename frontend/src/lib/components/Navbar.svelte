@@ -79,7 +79,7 @@
 		transition: background 0.3s, border-color 0.3s;
 	}
 	.logo {
-		font-size: 2.025rem;
+		font-size: clamp(1.4rem, 2vw, 2.025rem);
 		font-weight: 700;
 		color: var(--accent);
 	}
@@ -129,7 +129,7 @@
 		color: var(--text-muted);
 		text-decoration: none;
 		font-weight: 500;
-		font-size: 1.575rem;
+		font-size: clamp(1.1rem, 1.4vw, 1.575rem);
 		transition: color 0.2s;
 	}
 	.links a:hover {
@@ -137,9 +137,6 @@
 	}
 
 	@media (max-width: 768px) {
-		.logo {
-			font-size: 1.4rem;
-		}
 		.hamburger {
 			display: flex;
 		}

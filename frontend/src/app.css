@@ -49,7 +49,7 @@ body {
 	background: var(--bg);
 	color: var(--text-primary);
 	line-height: 1.6;
-	font-size: 1.625rem;
+	font-size: clamp(1rem, 1.5vw, 1.625rem);
 	transition: background 0.3s, color 0.3s;
 }
 
@@ -63,13 +63,13 @@ a:hover {
 }
 
 section {
-	padding: 80px 20px;
-	max-width: 900px;
+	padding: 80px 5vw;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
 h2 {
-	font-size: 2.625rem;
+	font-size: clamp(1.75rem, 3vw, 2.625rem);
 	margin-bottom: 32px;
 	color: var(--accent);
 	border-bottom: 2px solid var(--accent-soft);
@@ -78,14 +78,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-	body {
-		font-size: 1rem;
-	}
 	section {
 		padding: 48px 16px;
-	}
-	h2 {
-		font-size: 1.75rem;
-		margin-bottom: 24px;
 	}
 }
