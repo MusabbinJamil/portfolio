@@ -7,7 +7,7 @@
 
 <section class="hero">
 	<div class="card">
-		<img src="/2026.jpg" alt="Musab Bin Jamil" class="photo" />
+		<img src="/Gemini_Generated_Image_pc6q5fpc6q5fpc6q.png" alt="Musab Bin Jamil" class="photo" />
 		<p class="greeting">Hi, my name is</p>
 		<h1 class="name">{hero.name}</h1>
 		<p class="title">{hero.title}</p>
@@ -39,7 +39,7 @@
 	.photo {
 		width: 180px;
 		height: 180px;
-		border-radius: 50%;
+		border-radius: 12px;
 		object-fit: cover;
 		border: 3px solid var(--accent-soft);
 		margin-bottom: 24px;
@@ -51,6 +51,7 @@
 		font-weight: 500;
 	}
 	.name {
+		font-family: Papyrus, fantasy, cursive;
 		font-size: clamp(2.25rem, 5vw, 4.125rem);
 		font-weight: 700;
 		color: var(--accent);
