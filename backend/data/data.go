@@ -219,7 +219,7 @@ func NewStore() *Store {
 				Period:  "2023 – 2024",
 				Description: "Delivered diverse solutions including image processing, HRM systems, " +
 					"database design, automation, and web scraping. Contributed to innovation and standardization across projects.",
-				TechStack: []string{"Python", "PostgreSQL", "Image Processing", "Web Scraping"},
+				TechStack: []string{"Python", "PostgreSQL", "Image Processing", "Web Scraping", "Tkinter"},
 			},
 			{
 				ID:      4,
