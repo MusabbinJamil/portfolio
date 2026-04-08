@@ -17,5 +17,9 @@ Thumbs.db
 # Data
 *.csv
 
+# Firebase
+.firebase/
+.firebaserc
+
 # Misc
 *.tar.gz

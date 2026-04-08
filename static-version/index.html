@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Musab Bin Jamil — Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Musab Bin Jamil — Full Stack Developer building business solutions with Netforce, Tornado, and modern web technologies.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="logo">Musab</a>
+  <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="theme-toggle" onclick="toggleTheme()">&#9790;</button></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <img src="assets/2026.jpg" alt="Musab Bin Jamil" class="hero-photo" loading="eager">
+    <p class="hero-pre">Hi, my name is</p>
+    <h1>Musab Bin Jamil</h1>
+    <h2>Full Stack Developer</h2>
+    <p>Building business solutions with Netforce, Tornado, and modern web technologies.</p>
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="about-text">
+    Full stack developer currently building accounts and ecommerce workflows
+    on the Netforce/Tornado/XML stack at SmartB Solutions — my longest and most in-depth role.
+    Previously delivered Django backends, automation pipelines, and LLM-powered tools
+    across multiple companies. MS Data Sciences graduate from IBA Karachi.
+    Fast learner, tech savvy, and always eager to improve.
+  </p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+
+    <div class="card">
+      <div class="exp-role">Junior Full Stack Developer</div>
+      <div class="exp-company">SmartB Solutions Sdn Bhd</div>
+      <div class="exp-period">2024 – Present</div>
+      <p class="exp-desc">Iterative improvements to SmartB's Accounts and Stock tracking workflows. Ecommerce integration for Shopee, Lazada, TikTok Shop, Shopify, DHL, SPX Express and NinjaVan. Integration of OpenAI for chat-driven sales order generation. Bayesian decision support system development. Server-side support and client configuration on custom domains.</p>
+      <div class="badges">
+        <span class="badge">Netforce</span><span class="badge">Tornado</span><span class="badge">XML</span><span class="badge">Python</span><span class="badge">React</span><span class="badge">OpenAI API</span><span class="badge">Bayesian Methods</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="exp-role">Python Developer</div>
+      <div class="exp-company">Elite Chain L.L.C.</div>
+      <div class="exp-period">2024</div>
+      <p class="exp-desc">Sole developer on a Django-based backend project. Built APIs for a Rasa chatbot, implemented Celery-based automation, and developed JWT-based user authentication.</p>
+      <div class="badges">
+        <span class="badge">Django</span><span class="badge">Python</span><span class="badge">Rasa</span><span class="badge">Celery</span><span class="badge">JWT</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="exp-role">Python Developer</div>
+      <div class="exp-company">Nixaam L.L.C.</div>
+      <div class="exp-period">2023 – 2024</div>
+      <p class="exp-desc">Delivered diverse solutions including image processing, HRM systems, database design, automation, and web scraping. Contributed to innovation and standardization across projects.</p>
+      <div class="badges">
+        <span class="badge">Python</span><span class="badge">PostgreSQL</span><span class="badge">Image Processing</span><span class="badge">Web Scraping</span><span class="badge">Tkinter</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="exp-role">Research Assistant</div>
+      <div class="exp-company">Karachi Urban Lab</div>
+      <div class="exp-period">2023</div>
+      <p class="exp-desc">Cleaned and consolidated datasets using Python, Excel, and Oracle SQL. Applied machine learning (Ridge Regression) to handle missing data. Managed data storage and reporting via Google Drive and Sheets.</p>
+      <div class="badges">
+        <span class="badge">Python</span><span class="badge">Oracle SQL</span><span class="badge">Excel</span><span class="badge">Machine Learning</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="exp-role">Junior Developer</div>
+      <div class="exp-company">Wix Digitals</div>
+      <div class="exp-period">2023</div>
+      <p class="exp-desc">Developed algorithms on cryptocurrency data. Created interactive dashboards using Streamlit and automated scraping bots with Selenium. Utilized Git for version control.</p>
+      <div class="badges">
+        <span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">Selenium</span><span class="badge">Git</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+
+    <div class="card project-card">
+      <div class="project-title">FastMig</div>
+      <p class="project-desc">A data migration platform where users can clean text-based data using evolutionary computation and LLMs. Includes ETL workflow, DB connectivity, and other data transformation utilities.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">LLMs</span><span class="badge">Evolutionary Computation</span><span class="badge">ETL</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/FastMig" target="_blank">GitHub &rarr;</a>
+        <a href="https://fastmig.musabjamil.me" target="_blank">Live &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">ETL Pipeline using Airflow</div>
+      <p class="project-desc">A pipeline to extract, transform, and load data from a transactional database into a star schema for data analysis and insightful dashboarding.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">Apache Airflow</span><span class="badge">SQL</span><span class="badge">Star Schema</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/DataWarehousingProject" target="_blank">GitHub &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">LLM Based OCR Improvement</div>
+      <p class="project-desc">A prototype that fills in the gaps of Azure Computer Vision OCR using semantic imputation of text via the OpenAI API.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">OpenAI API</span><span class="badge">Azure Computer Vision</span><span class="badge">OCR</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/DeepLearning" target="_blank">GitHub &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">Persona Based Decision Making</div>
+      <p class="project-desc">An interface to load data and get feedback based on multiple user-defined personas, with verification on LLM answers using probabilistic reasoning.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">LLMs</span><span class="badge">Probabilistic Reasoning</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/Persona-Based-Data-Processing" target="_blank">GitHub &rarr;</a>
+        <a href="http://needtechlab.maccestech.com/action?name=persona" target="_blank">Live &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">Trike AI</div>
+      <p class="project-desc">An AI agent that can play the game of Trike using reinforcement learning.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">Reinforcement Learning</span><span class="badge">AI</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/CI_Trike" target="_blank">GitHub &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">Flask Dashboard</div>
+      <p class="project-desc">A Flask-based interactive dashboard for data visualization and analytics.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">Flask</span><span class="badge">HTML/CSS</span><span class="badge">JavaScript</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/Flask-Trading-Project" target="_blank">GitHub &rarr;</a>
+        <a href="https://musabjamil.pythonanywhere.com" target="_blank">Live &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">Chatta Patti</div>
+      <p class="project-desc">A WordPress-based website for Chatta Patti, a brand offering customized fashion products.</p>
+      <div class="badges"><span class="badge">WordPress</span><span class="badge">PHP</span><span class="badge">CSS</span></div>
+      <div class="project-links">
+        <a href="https://chattapatti.com" target="_blank">Live &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-title">Persona Based Insight Chat</div>
+      <p class="project-desc">A persona-based AI chat tool that lets users upload CSV data and query it through natural language. Built with Azure OpenAI for intelligent responses and a CSV data handling pipeline.</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">Azure OpenAI</span><span class="badge">CSV Pipeline</span><span class="badge">AI Chat</span></div>
+      <div class="project-links">
+        <a href="https://github.com/MusabbinJamil/Persona-Based-Data-Processing" target="_blank">GitHub &rarr;</a>
+        <a href="http://needtechlab.maccestech.com/action?name=ai_chat" target="_blank">Live &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="edu-grid">
+
+    <div class="card">
+      <div class="edu-degree">MS Data Sciences</div>
+      <div class="edu-inst">Institute of Business Administration (IBA), Karachi</div>
+      <div class="edu-year">2026</div>
+      <p class="edu-details">Core Courses: Data Analytics &amp; Warehousing, Machine Learning I &amp; II, Deep Learning, Computational Intelligence, Probabilistic Reasoning, DevOps</p>
+    </div>
+
+    <div class="card">
+      <div class="edu-degree">M.Sc. Space Science and Technology (With Thesis)</div>
+      <div class="edu-inst">University of Karachi</div>
+      <div class="edu-year">2021</div>
+      <p class="edu-details">Focus Areas: Quantum Mechanics, Gravitational Physics, GIS, Astrophysics, Atmospheric Sciences</p>
+    </div>
+
+    <div class="card">
+      <div class="edu-degree">B.Sc. (Hons) Space Science and Technology</div>
+      <div class="edu-inst">University of Karachi</div>
+      <div class="edu-year">2020</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <a href="mailto:musabjamil3@gmail.com">&#9993; musabjamil3@gmail.com</a>
+      <a href="https://github.com/MusabbinJamil" target="_blank">&#128187; GitHub</a>
+      <a href="https://www.linkedin.com/in/musab-b-630256b4/" target="_blank">&#128101; LinkedIn</a>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Musab Bin Jamil. Built with HTML, CSS &amp; JS.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
